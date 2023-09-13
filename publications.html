@@ -1,0 +1,1378 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Bolin Ding's Homepage</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+            <!--<script src="assets/js/util.paper.js"></script>-->
+
+            <script>
+                function genPaperHtml(papertitle, paperlink, authors, booktitle, papernote = '', withSlides = '') {
+                	var textWCite = '<p class="paper" id="_paperid">\
+                						<papertitle>\
+                							<a href="papers/_paperlink.pdf">\
+                								_papertitle\
+                							</a>\
+                							_paperslides\
+                						</papertitle><br>\
+                						<authors>\
+                							_authors\
+                						</authors><br>\
+                						<booktitle>\
+                							_booktitle\
+                						</booktitle>\
+                						_papernote\
+                						<a id = "_citelink"></a>\
+                					</p>';
+                    
+                    if (authors == '') {
+                        textWCite = textWCite.replace('</authors><br>', '</authors>');
+                    }
+                    if (withSlides == '') {
+                        textWCite = textWCite.replace('_paperslides', '');
+                    }
+                    else {
+                        textWCite = textWCite.replace('_paperslides', ' (<a href="papers/_paperlink-slides._withSlides">slides</a>)');
+                    }
+
+                    textWCite = textWCite.replace('_withSlides', withSlides);                    
+                	textWCite = textWCite.replace('_papertitle', papertitle);
+                	textWCite = textWCite.replace('_paperlink', paperlink);
+                	textWCite = textWCite.replace('_paperlink', paperlink);
+                	textWCite = textWCite.replace('_paperid', paperlink);
+                	textWCite = textWCite.replace('_authors', authors);
+                	textWCite = textWCite.replace('_booktitle', booktitle);
+                
+                	if (papernote !== '') {
+                		textWCite = textWCite.replace('_papernote', '<papernote>(' + papernote + ')</papernote>');
+                	}
+                	else {
+                		textWCite = textWCite.replace('_papernote', '');
+                	}
+                
+                	textWCite = textWCite.replace('_citelink', paperlink + '_cites');
+                	
+                	document.write(textWCite);
+                }
+
+                function showText(divId, text) {
+		           console.log(divId);
+		           console.log(text);
+		           $(divId).text(text);
+		    	}
+
+		    	function runPHP(divId, phpUrl) {
+		           console.log(divId);
+		           console.log(phpUrl);
+		           $(divId).load(phpUrl);
+		    	}
+		    	
+		    	function genCites(papertitle, paperlink, otherKeywords = 'Bolin Ding') {
+		    	   $('#'+paperlink+'_cites').load('citation.php?q='+encodeURI(papertitle + ' ' + otherKeywords));
+		    	}
+		    	
+		    	function genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote = '', withCite = true, withSlides = '') {
+		    	    genPaperHtml(papertitle, paperlink, authors, booktitle, papernote, withSlides);
+		    	 //   if (withCite) {
+		    	 //       genCites(papertitle, paperlink);
+		    	 //   }
+		    	}
+            </script>
+           
+            
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/BolinDing.jpg" alt="Bolin Ding" /></span>
+							<h1 id="title">Bolin Ding</h1>							
+							<h2>Alibaba Group</h2>
+						</div>
+						<p>
+							<a href="mailto:bolin.ding@alibaba-inc.com" class="icon fa-envelope" target="_blank">&nbsp&nbspEmail</a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						   	<a href="http://maps.google.com/?q=Bellevue, WA 98004, USA" class="icon fa-map-marker" target="_blank">&nbsp&nbspAddress</a>
+						</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li>
+									<a href="index.html" id="about-link"><span class="icon fa-home">About Me</span></a>
+								</li>
+								<li>
+									<a href="#top" id="publications-link" class="skel-layers-ignoreHref active"><span class="icon fa-folder-open">Publications</span></a>
+								</li>								
+								<li>
+									<a href="#selected" id="selected-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
+										<span class="label">Selected Publications</span>
+									</a>
+									<a href="publications-fav.html" id="favorites-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
+										<span class="label">My Favorites</span>
+									</a>
+								</li>
+								<li>
+									<a href="students.html" id="students-link"><span class="icon fa-users">For Students</span></a>
+								</li>
+								<li>
+									<a href="activities.html" id="activities-link"><span class="icon fa-th">Activities</span></a>
+								</li>
+							</ul>
+						</nav>
+				</div>
+
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://dblp.uni-trier.de/pers/hd/d/Ding:Bolin" class="icon fa-book" target="_blank">&nbsp&nbspDBLP<span class="label">DBLP</span></a></li>
+							<li><a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" class="icon fa-google" target="_blank">&nbsp&nbspGoogle Scholar<span class="label">Google Scholar</span></a></li>
+							<li><a href="https://www.linkedin.com/in/bolin-ding-50a0119/" class="icon fa-linkedin" target="_blank">&nbsp&nbspLinkedIn<span class="label">LinkedIn</span></a></li>
+						</ul>						
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						
+					</section>
+
+				<!-- Publications -->
+					<section class="three">
+						<div id="selected" class="container">
+							<h2>Selected Publications</h2>
+
+							<p>
+							    <a href="#pmanu">manuscripts</a> | <a href="#p2023">2023 and to-appear</a> | <a href="#p2022">2022</a> | <a href="#p2021">2021</a> | <a href="#p2020">2020</a> | <a href="#p2019">2019</a> | <a href="#p2018">2018</a> | <a href="#p2017">2017</a> | <a href="#p2016">2016</a> | <a href="#p2015">2015</a> | <a href="#p2014">2014</a> | <a href="#p2013">2013</a> | <a href="#p2012">2012</a> | <a href="#prest">earlier</a>
+							    <br>
+							    Please find the complete list in <a href="https://dblp.uni-trier.de/pers/hd/d/Ding:Bolin">DBLP</a> or <a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en">Google Scholar</a>
+							</p>
+
+							<p>Remark: (i) * <em>alphabetic ordering of authors;</em> (ii) ** <em>intern students who worked with me</em>; (iii) <sup>+</sup> <em>corresponding authors</em>.</p>
+
+                            <!--<p><smallnote>For your and my own convenience to do research and survey, some papers are marked by "<a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ">cited by xxx</a>", which is the number/list of citations (from <a href="https://scholar.google.com/">Google Scholar</a>). The number/list is auto-generated from <a href="https://www.google.com/search?q=collecting+telemetry+data+privately+bolin+ding">search pages</a> by <a href="citation.php.txt">a simple parser</a>, so there might be errors - please double check before you trust them.</smallnote></p>-->
+
+                            <div id="pmanu">
+                                <!--<h3>Some manuscripts</h3>-->
+
+                            </div>
+
+                            <div id="p2023">
+                                <h3>2023 and to-appear</h3>
+
+								<script>
+								    papertitle = 'FedHPO-Bench: A Benchmark Suite for Federated Hyperparameter Optimization';
+								    paperlink  = 'icml23fedhpo';
+								    authors    = 'Zhen Wang, Weirui Kuang, Ce Zhang, Bolin Ding, and Yaliang Li';
+								    booktitle  = 'ICML 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Personalized Federated Learning via Sparse Model-Adaptation';
+								    paperlink  = 'icml23pfl';
+								    authors    = 'Daoyuan Chen, Liuyi Yao, Dawei Gao, Bolin Ding, and Yaliang Li';
+								    booktitle  = 'ICML 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Revisiting Personalized Federated Learning: Robustness Against Backdoor Attacks';
+								    paperlink  = 'kdd23pfl';
+								    authors    = 'Zeyu Qin, Liuyi Yao, Daoyuan Chen, Yaliang Li, Bolin Ding, and Minhao Cheng';
+								    booktitle  = 'KDD 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'FS-Real: Towards Real-World Cross-Device Federated Learning';
+								    paperlink  = 'kdd23fsreal';
+								    authors    = 'Daoyuan Chen, Dawei Gao, Yuexiang Xie, Xuchen Pan, Zitao Li, Yaliang Li, Bolin Ding, and Jingren Zhou';
+								    booktitle  = 'KDD 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+
+								<script>
+								    papertitle = 'FS-Real: A Real-World Cross-Device Federated Learning Platform';
+								    paperlink  = 'vldb23fsreal';
+								    authors    = 'Dawei Gao, Daoyuan Chen, Zitao Li, Yuexiang Xie, Xuchen Pan, Yaliang Li, Bolin Ding, and Jingren Zhou';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = 'system demo';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'DILI: A Distribution-Driven Learned Index';
+								    paperlink  = 'vldb23dili';
+								    authors    = 'Pengfei Li, Hua Lu, Rong Zhu, Bolin Ding, Long Yang, and Gang Pan';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+                                
+								<script>
+								    papertitle = 'BASE: Bridging the Gap between Cost and Latency for Query Optimization';
+								    paperlink  = 'vldb23base';
+								    authors    = 'Xu Chen, Zhen Wang, Shuncheng Liu, Yaliang Li, Kai Zeng, Bolin Ding, Jingren Zhou, Han Su, and Kai Zheng';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Lero: A Learning-to-Rank Query Optimizer';
+								    paperlink  = 'vldb23lero';
+								    authors    = 'Rong Zhu, Wei Chen, Bolin Ding, Xingguang Chen, Andreas Pfadler, Ziniu Wu, and Jingren Zhou';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'FederatedScope: A Flexible Federated Learning Platform for Heterogeneity';
+								    paperlink  = 'vldb23fs';
+								    authors    = 'Yuexiang Xie, Zhen Wang, Dawei Gao, Daoyuan Chen, Liuyi Yao, Weirui Kuang, Yaliang Li, Bolin Ding, and Jingren Zhou';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = '<a href="https://arxiv.org/abs/2204.05011">arXiv version</a> and the <a href="https://federatedscope.io/">FederatedScope</a> project';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Path-specific Causal Fair Prediction via Auxiliary Graph Structure Learning';
+								    paperlink  = 'www23fairness';
+								    authors    = 'Liuyi Yao, Yaliang Li, Bolin Ding, Jingren Zhou, Jinduo Liu, Mengdi Huai, and Jing Gao';
+								    booktitle  = 'WWW 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Learned Index with Dynamic Epsilon';
+								    paperlink  = 'iclr23index';
+								    authors    = 'Daoyuan Chen, Wuchao Li, Yaliang Li, Bolin Ding, Kai Zeng, Defu Lian, and Jingren Zhou';
+								    booktitle  = 'ICLR 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Competitive Information Design for Pandora&#39s Box';
+								    paperlink  = 'soda23pandorabp';
+								    authors    = 'Bolin Ding*, Yiding Feng*, Chien-Ju Ho*, Wei Tang*, and Haifeng Xu*';
+								    booktitle  = 'SODA 2023';
+								    papernote  = '<a href="https://arxiv.org/abs/2103.03769">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Studying the Impact of Data Disclosure Mechanism in Recommender Systems via Simulation';
+								    paperlink  = 'tois23privacyinrecsys';
+								    authors    = 'Ziqian Chen, Fei Sun, Yifan Tang, Haokun Chen, Jinyang Gao, Bolin Ding';
+								    booktitle  = 'Transactions on Information Systems 2023';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+                            </div>
+
+                            <div id="p2022">
+                                <h3>2022</h3>
+
+								<script>
+								    papertitle = 'pFL-Bench: A Comprehensive Benchmark for Personalized Federated Learning';
+								    paperlink  = 'nips22pfl';
+								    authors    = 'Daoyuan Chen, Dawei Gao, Weirui Kuang, Yaliang Li, and Bolin Ding';
+								    booktitle  = 'NeurIPS 2022';
+								    papernote  = 'datasets and benchmarks track, <a href="https://arxiv.org/abs/2206.03655">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'EvenNet: Ignoring Odd-Hop Neighbors Improves Robustness of Graph Neural Networks';
+								    paperlink  = 'nips22eventnet';
+								    authors    = 'Runlin Lei, Zhen Wang, Yaliang Li, Bolin Ding, and Zhewei Wei';
+								    booktitle  = 'NeurIPS 2022';
+								    papernote  = '<a href="https://arxiv.org/abs/2205.13892">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'VF-PS: How to Select Important Participants in Vertical Federated Learning, Efficiently and Securely?';
+								    paperlink  = 'nips22vfps';
+								    authors    = 'Jiawei Jiang, Lukas Burkhalter, Fangcheng Fu, Bo Li, Bolin Ding, Bo Du, Anwar Hithnawi, and Ce Zhang';
+								    booktitle  = 'NeurIPS 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Strengthening Order Preserving Encryption with Differential Privacy';
+								    paperlink  = 'ccs22dpope';
+								    authors    = 'Amrita Roy Chowdhury**, Bolin Ding, Somesh Jha, Weiran Liu, and Jingren Zhou';
+								    booktitle  = 'CCS 2022';
+								    papernote  = '<a href="https://arxiv.org/abs/2009.05679">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'A Practical Introduction to Federated Learning';
+								    paperlink  = 'kdd22fs';
+								    authors    = '<a href="https://federatedscope.io/">FederatedScope</a> team members';
+								    booktitle  = 'KDD 2022';
+								    papernote  = 'conference tutorial';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'FederatedScope-GNN: Towards a Unified, Comprehensive and Efficient Package for Federated Graph Learning';
+								    paperlink  = 'kdd22fsgnn';
+								    authors    = 'Zhen Wang, Weirui Kuang, Yuexiang Xie, Liuyi Yao, Yaliang Li, Bolin Ding, and Jingren Zhou';
+								    booktitle  = 'KDD 2022';
+								    papernote  = 'best paper in ADS track, <a href="https://arxiv.org/abs/2204.05562">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Graph Neural Networks with Node-wise Architecture';
+								    paperlink  = 'kdd22nwgnn';
+								    authors    = 'Zhen Wang, Zhewei Wei, Yaliang Li, Weirui Kuang, and Bolin Ding';
+								    booktitle  = 'KDD 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Sampling-based Estimation of the Number of Distinct Values in Distributed Environment';
+								    paperlink  = 'kdd22ndvestdist';
+								    authors    = 'Jiajun Li**, Zhewei Wei, Bolin Ding, Xiening Dai, Lu Lu, Jingren Zhou';
+								    booktitle  = 'KDD 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Towards Universal Sequence Representation Learning for Recommender Systems.';
+								    paperlink  = 'kdd22universalseq';
+								    authors    = 'Yupeng Hou, Shanlei Mu, Wayne Xin Zhao, Yaliang Li, Bolin Ding, and Ji-Rong Wen';
+								    booktitle  = 'KDD 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Finding Meta Winning Ticket to Train Your MAML';
+								    paperlink  = 'kdd22maml';
+								    authors    = 'Dawei Gao, Yuexiang Xie, Zimu Zhou, Zhen Wang, Yaliang Li, and Bolin Ding';
+								    booktitle  = 'KDD 2022';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+
+								<script>
+								    papertitle = 'Learned Query Optimizer: At the Forefront of AI-driven Databases';
+								    paperlink  = 'edbt22aidb';
+								    authors    = 'Rong Zhu, Ziniu Wu, Chengliang Chai, Andreas Pfadler, Bolin Ding, Guoliang Li, and Jingren Zhou';
+								    booktitle  = 'EDBT 2022';
+								    papernote  = 'conference tutorial';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'One Size Does Not Fit All: A Bandit-Based Sampler Combination Framework with Theoretical Guarantees';
+								    paperlink  = 'sigmod22mabapq';
+								    authors    = 'Jinglin Peng**, Bolin Ding, Jiannan Wang, Kai Zeng, and Jingren Zhou';
+								    booktitle  = 'SIGMOD 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'iFlood: A Stable and Effective Regularizer';
+								    paperlink  = 'iclr22iflood';
+								    authors    = 'Yuexiang Xie, Zhen Wang, Yaliang Li, Ce Zhang, Jingren Zhou, and Bolin Ding';
+								    booktitle  = 'ICLR 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Federated Matrix Factorization with Privacy Guarantee';
+								    paperlink  = 'vldb22fedmf';
+								    authors    = 'Zitao Li**, Bolin Ding, Ce Zhang, Ninghui Li, and Jingren Zhou';
+								    booktitle  = 'VLDB 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Learning to be a Statistician: Learned Estimator for Number of Distinct Values';
+								    paperlink  = 'vldb22ndvest';
+								    authors    = 'Renzhi Wu**, Bolin Ding, Xu Chu, Zhewei Wei, Xiening Dai, Tao Guan, and Jingren Zhou';
+								    booktitle  = 'VLDB 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'Alleviating Spurious Correlations in Knowledge-aware Recommendations through Counterfactual Generator';
+								    paperlink  = 'sigir22rec';
+								    authors    = 'Shanlei Mu, Yaliang Li, Wayne Xin Zhao, Jingyuan Wang, Bolin Ding, and Ji-Rong Wen';
+								    booktitle  = 'SIGIR 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'KoMen: Domain Knowledge Guided Interaction Recommendation for Emerging Scenarios';
+								    paperlink  = 'www22komen';
+								    authors    = 'Yiqing Xie, Zhen Wang, Carl Yang, Yaliang Li, Bolin Ding, Hongbo Deng, and Jiawei Han';
+								    booktitle  = 'WWW 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Recommendation Unlearning';
+								    paperlink  = 'www22unlearning';
+								    authors    = 'Chong Chen, Fei Sun, Min Zhang, and Bolin Ding';
+								    booktitle  = 'WWW 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Explainable Neural Rule Learning';
+								    paperlink  = 'www22neuralrule';
+								    authors    = 'Shaoyun Shi, Yuexiang Xie, Zhen Wang, Bolin Ding, Yaliang Li, and Min Zhang';
+								    booktitle  = 'WWW 2022';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+                            </div>
+
+                            <div id="p2021">
+                                <h3>2021</h3>
+                                
+								<script>
+								    papertitle = 'Debiasing Learning based Cross-domain Recommendation';
+								    paperlink  = 'kdd21debias';
+								    authors    = 'Siqing Li**, Liuyi Yao, Shanlei Mu, Wayne Xin Zhao, Yaliang Li, Tonglei Guo, Bolin Ding, and Ji-Rong Wen';
+								    booktitle  = 'KDD 2021';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'FIVES: Feature Interaction Via Edge Search for Large-Scale Tabular Data';
+								    paperlink  = 'kdd21fives';
+								    authors    = 'Yuexiang Xie, Zhen Wang, Yaliang Li, Bolin Ding, Nezihe Merve Gürel, Ce Zhang, Minlie Huang, Wei Lin, and Jingren Zhou';
+								    booktitle  = 'KDD 2021';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'AutoML: A Perspective where Industry Meets Academy';
+								    paperlink  = 'kdd21automl';
+								    authors    = 'Yaliang Li, Zhen Wang, Yuexiang Xie, Bolin Ding, and Ce Zhang';
+								    booktitle  = 'KDD 2021';
+								    papernote  = 'conference tutorial';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'FlashP: An Analytical Pipeline for Real-time Forecasting of Time-Series Relational Data';
+								    paperlink  = 'vldb21flashp';
+								    authors    = 'Shuyuan Yan, Bolin Ding<sup>+</sup>, Wei Guo, Jingren Zhou, Zhewei Wei, Xiaowei Jiang, and Sheng Xu';
+								    booktitle  = 'VLDB 2021';
+								    papernote  = '<a href="https://arxiv.org/abs/2101.03298">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'VolcanoML: Speeding up End-to-End AutoML via Scalable Search Space Decomposition';
+								    paperlink  = 'vldb21vocanoml';
+								    authors    = 'Yang Li, Yu Shen, Wentao Zhang, Jiawei Jiang, Yaliang Li, Bolin Ding, Jingren Zhou, Zhi Yang, Wentao Wu, Ce Zhang, and Bin Cui';
+								    booktitle  = 'VLDB 2021';
+								    papernote  = '<a href="https://arxiv.org/abs/2107.08861">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Improving Utility and Security of the Shuffler-based Differential Privacy';
+								    paperlink  = 'vldb20shufflerdp';
+								    authors    = 'Tianhao Wang**, Bolin Ding, Min Xu**, Zhicong Huang, Cheng Hong, Jingren Zhou, Ninghui Li, and Somesh Jha';
+								    booktitle  = 'VLDB 2021';
+								    papernote  = 'also in <booktitle>PVLDB 2020</booktitle>, <a href="https://arxiv.org/abs/1908.11515">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'CGM: An Enhanced Mechanism for Streaming Data Collectionwith Local Differential Privacy';
+								    paperlink  = 'vldb21cgm';
+								    authors    = 'Ergute Bao, Yin Yang, Xiaokui Xiao, and Bolin Ding';
+								    booktitle  = 'VLDB 2021';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'Catch a Blowfish Alive: A Demonstration of Policy-Aware Differential Privacy for Interactive Data Exploration';
+								    paperlink  = 'vldb21blowfishdemo';
+								    authors    = 'Jiaxiang Liu, Karl Knopf, Yiqing Tan, Bolin Ding, and Xi He';
+								    booktitle  = 'VLDB 2021';
+								    papernote  = 'system demo';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning';
+								    paperlink  = 'sigir21recbot';
+								    authors    = 'Yang Deng, Yaliang Li, Fei Sun, Bolin Ding, and Wai Lam';
+								    booktitle  = 'SIGIR 2021';
+								    papernote  = '<a href="https://arxiv.org/abs/2105.09710">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Reductions and A Fast Algorithm of Maximum Weighted Independent Set';
+								    paperlink  = 'www21mwis';
+								    authors    = 'Mingyu Xiao, Sen Huang, Yi Zhou, and Bolin Ding';
+								    booktitle  = 'WWW 2021';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+                                
+								<script>
+								    papertitle = 'Two-Sided Online Micro-Task Assignment in Spatial Crowdsourcing';
+								    paperlink  = 'tkde19twosided';
+								    authors    = 'Yongxin Tong, Yuxiang Zeng, Bolin Ding, Libin Wang, and Lei Chen';
+								    booktitle  = 'Transactions on Knowledge and Data Engineering 33(5) 2021';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+                                
+                            </div>
+
+                            <div id="p2020">
+                                <h3>2020</h3>
+
+								<script>
+								    papertitle = 'Learning to Mutate with Hypergradient Guided Population';
+								    paperlink  = 'nips20autohpo';
+								    authors    = 'Zhiqiang Tao**, Yaliang Li, Bolin Ding, Ce Zhang, Jingren Zhou, and Yun Fu';
+								    booktitle  = 'NeurIPS 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Scalable Graph Neural Networks via Bidirectional Propagation';
+								    paperlink  = 'nips20scalablegnn';
+								    authors    = 'Ming Chen, Zhewei Wei, Bolin Ding, Yaliang Li, Ye Yuan, Xiaoyong Du, and Ji-Rong Wen';
+								    booktitle  = 'NeurIPS 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Collecting and Analyzing Data Jointly from Multiple Services under Local Differential Privacy';
+								    paperlink  = 'vldb20jointldp';
+								    authors    = 'Min Xu**, Bolin Ding, Tianhao Wang**, and Jingren Zhou';
+								    booktitle  = 'VLDB 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pdf');
+								</script>
+
+								<script>
+								    papertitle = 'Simple and Deep Graph Convolutional Networks';
+								    paperlink  = 'icml20deepgcn';
+								    authors    = 'Ming Chen, Zhewei Wei, Zengfeng Huang, Bolin Ding, and Yaliang Li';
+								    booktitle  = 'ICML 2020';
+								    papernote  = '<a href="https://arxiv.org/abs/2007.02133">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'AdaBERT: Task-Adaptive BERT Compression with Differentiable Neural Architecture Search';
+								    paperlink  = 'ijcai20adabert';
+								    authors    = 'Daoyuan Chen, Yaliang Li, Minghui Qiu, Zhen Wang, Bofang Li, Bolin Ding, Hongbo Deng, Jun Huang, Wei Lin, and Jingren Zhou';
+								    booktitle  = 'IJCAI 2020';
+								    papernote  = '<a href="https://arxiv.org/abs/2001.04246">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Intent Preference Decoupling for User Representation on Online Recommender System';
+								    paperlink  = 'ijcai20intent';
+								    authors    = 'Zhaoyang Liu, Haokun Chen, Fei Sun, Xu Xie, Jinyang Gao, Bolin Ding, and Yanyan Shen';
+								    booktitle  = 'IJCAI 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Sequential Recommendation with Self-attentive Multi-adversarial Network';
+								    paperlink  = 'sigir20seqrec';
+								    authors    = 'Ruiyang Ren, Zhaoyang Liu, Yaliang Li, Wayne Xin Zhao, Hui Wang, Bolin Ding, and Ji-Rong Wen';
+								    booktitle  = 'SIGIR 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Linear and Range Counting under Metric-based Local Differential Privacy';
+								    paperlink  = 'isit20blowfishldp';
+								    authors    = 'Zhuolun Xiang**, Bolin Ding, Xi He, and Jingren Zhou';
+								    booktitle  = 'ISIT 2020';
+								    papernote  = '<a href="https://arxiv.org/abs/1909.11778">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+								</script>
+                                
+								<script>
+								    papertitle = 'Towards Differentially Private Truth Discovery for Crowd Sensing Systems';
+								    paperlink  = 'icdcs20dptruth';
+								    authors    = 'Yaliang Li, Houping Xiao, Zhan Qin, Chenglin Miao, Lu Su, Jing Gao, Kui Ren, and Bolin Ding';
+								    booktitle  = 'ICDCS 2020';
+								    papernote  = '<a href="https://arxiv.org/abs/1810.04760">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+								
+								<script>
+								    papertitle = 'Practical Data Poisoning Attack Against Next-Item Recommendation';
+								    paperlink  = 'www20attackrec';
+								    authors    = 'Hengtong Zhang**, Yaliang Li, Bolin Ding, and Jing Gao';
+								    booktitle  = 'WWW 2020';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Automated Relational Meta-learning';
+								    paperlink  = 'iclr20autometa';
+								    authors    = 'Huaxiu Yao**, Xian Wu**, Zhiqiang Tao**, Yaliang Li, Bolin Ding, Ruirui Li, and Zhenhui Li';
+								    booktitle  = 'ICLR 2020';
+								    papernote  = '<a href="https://arxiv.org/abs/2001.00745">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+                            </div>
+
+                            <div id="p2019">
+                                <h3>2019</h3>
+
+								<script>
+								    papertitle = 'An Algorithmic Framework For Differentially Private Data Analysis on Trusted Processors';
+								    paperlink  = 'nips19sgxdp';
+								    authors    = 'Joshua Allen*, Bolin Ding*, Janardhan Kulkarni*, Harsha Nori*, Olga Ohrimenko*, and Sergey Yekhanin*';
+								    booktitle  = 'NeurIPS 2019';
+								    papernote  = '<a href="https://arxiv.org/abs/1807.00736">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'DPSAaS: Multi-Dimensional Data Sharing and Analytics as Services under Local Differential Privacy';
+								    paperlink  = 'vldb19DPSAaS';
+								    authors    = 'Min Xu**, Tianhao Wang**, Bolin Ding, Jingren Zhou, Cheng Hong, and Zhicong Huang';
+								    booktitle  = 'VLDB 2019';
+								    papernote  = 'system demo';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Answering Multi-Dimensional Analytical Queries under Local Differential Privacy';
+								    paperlink  = 'sigmod19ldpmda';
+								    authors    = 'Tianhao Wang**, Bolin Ding, Jingren Zhou, Cheng Hong, Zhicong Huang, Ninghui Li, and Somesh Jha';
+								    booktitle  = 'SIGMOD 2019';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'Continuous Integration of Machine Learning Models: A Rigorous Yet Practical Treatment';
+								    paperlink  = 'sysml19ciml';
+								    authors    = 'Cedric Renggli, Bojan Karlas, Bolin Ding, Feng Liu, Kevin Schawinski, Wentao Wu, and Ce Zhang';
+								    booktitle  = 'SysML 2019';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Identification of Approximate Best Configuration of Training in Large Datasets';
+								    paperlink  = 'aaai19abc';
+								    authors    = 'Silu Huang**, Chi Wang, Bolin Ding, and Surajit Chaudhuri';
+								    booktitle  = 'AAAI 2019';
+								    papernote  = 'oral presentation';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+                            </div>
+                            
+							<div id="p2018">
+								<h3>2018</h3>
+
+								<script>
+								    papertitle = 'A Distributed Algorithm For Differentially Private Heavy Hitters (AoN)';
+								    paperlink  = 'ppml18aon-full';
+								    authors    = 'Bolin Ding, Janardhan Kulkarni, and Sergey Yekhanin';
+								    booktitle  = 'NeurIPS Workshop 2018 - PPML';
+								    papernote  = 'this <a href="papers/ppml18aon.py">code</a> compares AoN with <a href="https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf">OLH</a> -- OLH turns out to be better empirically...';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'An Algorithmic Framework For Differentially Private Data Analysis on Trusted Processors';
+								    paperlink  = 'ppml18dpsgx';
+								    authors    = 'Joshua Allen*, Bolin Ding*, Janardhan Kulkarni*, Harsha Nori*, Olga Ohrimenko*, and Sergey Yekhanin*';
+								    booktitle  = 'NeurIPS Workshop 2018 - PPML';
+								    papernote  = '<a href="https://arxiv.org/abs/1807.00736">arXiv version</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, false, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Estimation of Inclusion Coefficient using HyperLogLog Sketches';
+								    paperlink  = 'vldb18hllforinc';
+								    authors    = 'Azade Nazi, Bolin Ding, Vivek R. Narasayya, and Surajit Chaudhuri';
+								    booktitle  = 'VLDB 2018';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'An Efficient Two-Layer Mechanism for Privacy-Preserving Truth Discovery';
+								    paperlink  = 'kdd18dptruth';
+								    authors    = 'Yaliang Li, Chenglin Miao, Lu Su, Jing Gao, Qi Li, Bolin Ding, Zhan Qin, and Kui Ren';
+								    booktitle  = 'KDD 2018';
+								    papernote  = 'long presentation';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Columnstore and B+ tree - Are Hybrid Physical Designs Important?';
+								    paperlink  = 'sigmod18hybridcb';
+								    authors    = 'Adam Dziedzic, Jingjing Wang, Sudipto Das, Bolin Ding, Vivek R. Narasayya, and Manoj Syamala';
+								    booktitle  = 'SIGMOD 2018';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Comparing Population Means under Local Differential Privacy: with Significance and Power';
+								    paperlink  = 'aaai18dpab';
+								    authors    = 'Bolin Ding, Harsha Nori, Paul Li, and Joshua Allen';
+								    booktitle  = 'AAAI 2018';
+								    papernote  = 'oral presentation';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+								</script>
+
+							</div>
+
+							<div id="p2017">
+								<h3>2017</h3>
+
+								<script>
+								    papertitle = 'Collecting Telemetry Data Privately';
+								    paperlink  = 'nips17dptelemetry';
+								    authors    = 'Bolin Ding*, Janardhan Kulkarni*, and Sergey Yekhanin*';
+								    booktitle  = 'NIPS 2017';
+								    papernote  = 'and <a href="https://www.microsoft.com/en-us/research/blog/collecting-telemetry-data-privately/">an Microsoft Research Blog</a>';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Flexible Online Task Assignment in Real-Time Spatial Data';
+								    paperlink  = 'vldb17task';
+								    authors    = 'Yongxin Tong, Libin Wang, Zimu Zhou, Bolin Ding, Lei Chen, Jieping Ye, and Ke Xu';
+								    booktitle  = 'VLDB 2017';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Approximate Query Processing: No Silver Bullet';
+								    paperlink  = 'sigmod17aqpnosb';
+								    authors    = 'Surajit Chaudhuri, Bolin Ding, and Srikanth Kandula';
+								    booktitle  = 'SIGMOD 2017';
+								    papernote  = 'an invited keynote';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Trust, but Verify: Optimistic Visualizations of Approximate Queries for Exploring Big Data';
+								    paperlink  = 'chi17trustbutverify';
+								    authors    = 'Dominik Moritz**, Danyel Fisher, Bolin Ding, and Chi Wang';
+								    booktitle  = 'CHI 2017';
+								    papernote  = 'find a demo in this <a href="https://www.microsoft.com/en-us/research/publication/trust-verify-optimistic-visualizations-approximate-queries-exploring-big-data/">video</a>';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+							</div>
+
+							<div id="p2016">
+								<h3>2016</h3>
+
+								<script>
+								    papertitle = 'Online Minimum Matching in Real-Time Spatial Data: Experiments and Analysis';
+								    paperlink  = 'vldb16matching';
+								    authors    = 'Yongxin Tong, Jieying She, Bolin Ding, Lei Chen, Tianyu Wo, and Ke Xu';
+								    booktitle  = 'VLDB 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Enabling Privacy-Preserving Incentives for Mobile Crowd Sensing Systems';
+								    paperlink  = 'icdcs16dpcrowd';
+								    authors    = 'Haiming Jin, Lu Su, Bolin Ding, Klara Nahrstedt, and Nikita Borisov';
+								    booktitle  = 'ICDCS 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Online mobile Micro-Task Allocation in Spatial Crowdsourcing';
+								    paperlink  = 'icde16task';
+								    authors    = 'Yongxin Tong, Jieying She, Bolin Ding, Libin Wang, and Lei Chen';
+								    booktitle  = 'ICDE 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Sample + Seek: Approximating Aggregates with Distribution Precision Guarantee';
+								    paperlink  = 'sigmod16sampleseek';
+								    authors    = 'Bolin Ding, Silu Huang**, Surajit Chaudhuri, Kaushik Chakrabarti, and Chi Wang';
+								    booktitle  = 'SIGMOD 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+								</script>
+
+								<script>
+								    papertitle = 'Quickr: Lazily Approximating Complex AdHoc Queries in BigData Clusters';
+								    paperlink  = 'sigmod16quickr';
+								    authors    = 'Srikanth Kandula, Anil Shanbhag, Aleksandar Vitorovic, Matthaios Olma, Robert Grandl, Surajit Chaudhuri, and Bolin Ding';
+								    booktitle  = 'SIGMOD 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Operator and Query Progress Estimation in Microsoft SQL Server Live Query Statistics';
+								    paperlink  = 'sigmod16progress';
+								    authors    = 'Kukjin Lee, Arnd Christian König, Vivek R. Narasayya, Bolin Ding, Surajit Chaudhuri, Brent Ellwein, Alexey Eksarevskiy, Manbeen Kohli, Jacob Wyant, Praneeta Prakash, Rimma V. Nehme, Jiexing Li, and Jeffrey F. Naughton';
+								    booktitle  = 'SIGMOD 2016';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+							</div>
+
+							<div id="p2015">
+								<h3>2015</h3>
+
+								<script>
+								    papertitle = 'Design of Policy-Aware Differentially Private Algorithms';
+								    paperlink  = 'vldb15policydp';
+								    authors    = 'Samuel Haney, Ashwin Machanavajjhala, and Bolin Ding';
+								    booktitle  = 'VLDB 2015';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'S4: Top-k Spreadsheet-Style Search for Query Discovery';
+								    paperlink  = 'sigmod15s4';
+								    authors    = 'Fotis Psallidas**, Bolin Ding, Kaushik Chakrabarti, and Surajit Chaudhuri';
+								    booktitle  = 'SIGMOD 2015';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+                            </div>
+
+							<div id="p2014">
+								<h3>2014</h3>
+
+								<script>
+								    papertitle = 'Finding Patterns in a Knowledge Base using Keywords to Compose Table Answers';
+								    paperlink  = 'vldb15kspatterns';
+								    authors    = 'Mohan Yang**, Bolin Ding, Surajit Chaudhuri, and Kaushik Chakrabarti';
+								    booktitle  = 'VLDB 2014';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Scalable near Real-time Failure Localization of Data Center Networks';
+								    paperlink  = 'kdd14failureloc';
+								    authors    = 'Herodotos Herodotou, Bolin Ding, Shobana Balakrishnan, Geoff Outhred, and Percy Fitter';
+								    booktitle  = 'KDD 2014';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Discovering Queries based on Example Tuples';
+								    paperlink  = 'sigmod14discover';
+								    authors    = 'Yanyan Shen**, Kaushik Chakrabarti, Surajit Chaudhuri, Bolin Ding, and Lev Novik';
+								    booktitle  = 'SIGMOD 2014';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Blowfish Privacy: Tuning Privacy-Utility Trade-offs using Policies';
+								    paperlink  = 'sigmod14blowfish';
+								    authors    = 'Xi He, Ashwin Machanavajjhala, and Bolin Ding';
+								    booktitle  = 'SIGMOD 2014';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+                            </div>
+
+							<div id="p2013">
+								<h3>2013</h3>
+
+								<script>
+								    papertitle = 'Attraction and Avoidance Detection from Movements';
+								    paperlink  = 'vldb13detection';
+								    authors    = 'Zhenhui Li, Bolin Ding, Fei Wu, Tobias Kin Hou Lei, Roland Kays, and Margaret Crofoot';
+								    booktitle  = 'VLDB 2013';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'EventCube: Multi-Dimensional Search and Mining of Structured and Text Data';
+								    paperlink  = 'kdd13cube';
+								    authors    = 'Fangbo Tao <em>et al.</em>';
+								    booktitle  = 'KDD 2013';
+								    papernote  = 'a demo of <a href="papers/icdm08textcube.pdf">TextCube</a>, <a href="papers/tkde11topcells.pdf">TopCells</a>, and other multi-dimensional text retrieval techniques';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+                            </div>
+
+							<div id="p2012">
+								<h3>2012</h3>
+
+								<script>
+								    papertitle = 'Mining Periodic Behaviors of Object Movements for Animal and Biological Sustainability Studies';
+								    paperlink  = 'dmkd11periodic';
+								    authors    = 'Zhenhui Li, Jiawei Han, Bolin Ding, and Roland Kays';
+								    booktitle  = 'Data Min. Knowl. Discov. 24(2) 2012';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Discovering Threshold-based Frequent Closed Itemsets over Probabilistic Data';
+								    paperlink  = 'icde12uncertainclosed';
+								    authors    = 'Yongxin Tong, Lei Chen, and Bolin Ding';
+								    booktitle  = 'ICDE 2012';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+								<script>
+								    papertitle = 'Optimizing Index for Taxonomy Keyword Search';
+								    paperlink  = 'sigmod12taxonomyindex';
+								    authors    = 'Bolin Ding, Haixun Wang, Ruoming Jin, Jiawei Han, and Zhongyuan Wang';
+								    booktitle  = 'SIGMOD 2012';
+								    papernote  = '';
+
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);
+								</script>
+
+                            </div>
+
+							<!--<div id="p2011">-->
+							<!--	<h3>2011</h3>-->
+
+							<!--	<script>-->
+							<!--	    document.write('<p>zzz</p>');-->
+							<!--	    var txtFile = 'papers\vldb11intersection.bib'-->
+							<!--	</script>-->
+
+       <!--                     </div>-->
+
+							<!--<div id="p20xx">-->
+							<!--	<h3>20xx</h3>-->
+
+							<!--	<script>-->
+							<!--	    papertitle = '';-->
+							<!--	    paperlink  = '';-->
+							<!--	    authors    = '';-->
+							<!--	    booktitle  = '';-->
+							<!--	    papernote  = '';-->
+
+							<!--	    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true);-->
+							<!--	</script>-->
+
+       <!--                     </div>-->
+
+							<div id="prest">
+								<h3>Some earlier papers (pre-PhD)</h3>
+
+								<script>
+								    papertitle = 'Fast Set Intersection in Memory';
+								    paperlink  = 'vldb11intersection';
+								    authors    = 'Bolin Ding and Arnd Christian König';
+								    booktitle  = 'VLDB 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Distance-Constraint Reachability Computation in Uncertain Graphs';
+								    paperlink  = 'vldb11reachability';
+								    authors    = 'Ruoming Jin, Lin Liu, Bolin Ding, and Haixun Wang';
+								    booktitle  = 'VLDB 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'A Statistical Approach Towards Robust Progress Estimation';
+								    paperlink  = 'vldb11progressest';
+								    authors    = 'Arnd Christian König, Bolin Ding, Surajit Chaudhuri, and Vivek R. Narasayya';
+								    booktitle  = 'VLDB 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Differentially Private Data Cubes: Optimizing Noise Sources and Consistency';
+								    paperlink  = 'sigmod11privatecube';
+								    authors    = 'Bolin Ding, Marianne Winslett, Jiawei Han, and Zhenhui Li';
+								    booktitle  = 'SIGMOD 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Bidirectional Mining of Non-redundant Recurrent Rules from a Sequence Database';
+								    paperlink  = 'icde11recurrent';
+								    authors    = 'David Lo, Bolin Ding, Lucia, and Jiawei Han';
+								    booktitle  = 'ICDE 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Keyword-Based Search for Top-K Cells in Text Cube';
+								    paperlink  = 'tkde11topcells';
+								    authors    = 'Bolin Ding, Bo Zhao, Cindy Xide Lin, Jiawei Han, Chengxiang Zhai, Ashok N. Srivastava, and Nikunj C. Oza';
+								    booktitle  = 'Transactions on Knowledge and Data Engineering 23(12) 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'TEXplorer: Keyword-based Object Search and Exploration in Multidimensional Text Databases';
+								    paperlink  = 'cikm11texplorer';
+								    authors    = 'Bo Zhao, Cindy Xide Lin, Bolin Ding, and Jiawei Han';
+								    booktitle  = 'CIKM 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Hierarchical Aggregate Classification with Limited Supervision for Data Reduction in Wireless Sensor Networks';
+								    paperlink  = 'sensys11aggregate';
+								    authors    = 'Lu Su, Jing Gao, Yong Yang, Tarek F. Abdelzaher, Bolin Ding, and Jiawei Han';
+								    booktitle  = 'SenSys 2011';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Swarm: Mining Relaxed Temporal Moving Object Clusters';
+								    paperlink  = 'vldb10swarm';
+								    authors    = 'Zhenhui Li, Bolin Ding, Jiawei Han, and Roland Kays';
+								    booktitle  = 'VLDB 2010';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'TopCells: Keyword-based Search of Top-k Aggregated Documents in Text Cube';
+								    paperlink  = 'icde10topcells';
+								    authors    = 'Bolin Ding, Bo Zhao, Cindy Xide Lin, Jiawei Han, and Chengxiang Zhai';
+								    booktitle  = 'ICDE 2010';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Mining Periodic Behaviors for Moving Objects';
+								    paperlink  = 'kdd10period';
+								    authors    = 'Zhenhui Li, Bolin Ding, Jiawei Han, Roland Kays, and Peter Nye';
+								    booktitle  = 'KDD 2010';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Query translation from XPath to SQL in the presence of recursive DTDs';
+								    paperlink  = '';
+								    authors    = 'Wenfei Fan, Jeffrey Xu Yu, Jianzhong Li, Bolin Ding, and Lu Qin';
+								    booktitle  = 'VLDB Journal 18(4) 2009';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Efficient Mining of Closed Repetitive Gapped Subsequences from a Sequence Database';
+								    paperlink  = 'icde09repetitive';
+								    authors    = 'Bolin Ding, David Lo, Jiawei Han, and Siau-Cheng Khoo';
+								    booktitle  = 'ICDE 2009';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'ppt');
+								</script>
+
+								<script>
+								    papertitle = 'oCast: Optimal Multicast Routing Protocol for Wireless Sensor Networks';
+								    paperlink  = 'icnp09ocast';
+								    authors    = 'Lu Su, Bolin Ding, Yong Yang, Tarek F. Abdelzaher, Guohong Cao, and Jennifer C. Hou';
+								    booktitle  = 'ICNP 2009';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Finding Time-Dependent Shortest Paths over Large Graphs';
+								    paperlink  = 'edbt08tdsp';
+								    authors    = 'Bolin Ding, Jeffrey Xu Yu, and Lu Qin';
+								    booktitle  = 'EDBT 2008';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'ppt');
+								</script>
+
+								<script>
+								    papertitle = 'Fast Graph Pattern Matching';
+								    paperlink  = 'icde08gsearch';
+								    authors    = 'Jiefeng Cheng, Jeffrey Xu Yu, Bolin Ding, Philip S. Yu, and Haixun Wang';
+								    booktitle  = 'ICDE 2008';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Text Cube: Computing IR Measures for Multidimensional Text Database Analysis';
+								    paperlink  = 'icdm08textcube';
+								    authors    = 'Cindy Xide Lin, Bolin Ding, Jiawei Han, Feida Zhu, and Bo Zhao';
+								    booktitle  = 'ICDM 2008';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Stream Sequential Pattern Mining with Precise Error Bounds';
+								    paperlink  = 'icdm08stream';
+								    authors    = 'Luiz F. Mendes, Bolin Ding, and Jiawei Han';
+								    booktitle  = 'ICDM 2008';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pdf');
+								</script>
+
+								<script>
+								    papertitle = 'TwigList: Make Twig Pattern Matching Fast';
+								    paperlink  = 'dasfaa07twiglist';
+								    authors    = 'Lu Qin, Jeffrey Xu Yu, and Bolin Ding';
+								    booktitle  = 'DASFAA 2007';
+								    papernote  = '';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+
+								<script>
+								    papertitle = 'Finding Top-k Min-Cost Connected Trees in Databases';
+								    paperlink  = 'icde07steiner';
+								    authors    = 'Bolin Ding, Jeffrey Xu Yu, Shan Wang, Lu Qin, Xiao Zhang, and Xuemin Lin';
+								    booktitle  = 'ICDE 2007';
+								    papernote  = 'best student paper';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pdf');
+								</script>
+
+								<script>
+								    papertitle = 'NUITS: A Novel User Interface for Efficient Keyword Search over Databases';
+								    paperlink  = 'vldb06nuits';
+								    authors    = 'Shan Wang, Zhaohui Peng, Jun Zhang, Lu Qin, Sheng Wang, Jeffrey Xu Yu, and Bolin Ding';
+								    booktitle  = 'VLDB 2006';
+								    papernote  = 'system demo';
+								    
+								    genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, '');
+								</script>
+							</div>
+                        <!-- Debug -->
+							<a id = 'test'></a>
+    						<script type="text/javascript" src="https://scholar.google.com/citations?view_op=view_citation&citation_for_view=MoJFIiQAAAAJ:HE397vMXCloC"></script>
+    						<script>
+				                // document.getElementById("test").innerHTML = '<p>Test Text</p>';
+				                // showText('#test', '<p>Test Text</p>');
+				                // runPHP('#test', 'citation.php');
+			                </script>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright <li>&copy; Untitled. All rights reserved.</li> -->
+					<ul class="copyright">						
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				
+				<!--<script src="//t1.extreme-dm.com/f.js" id="eXF-atlas198-0" async defer></script>-->
+			</div>
+			
+	</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Bolin Ding's Homepage</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+            <!--<script src="assets/js/util.paper.js"></script>-->
+
+            <script>
+                function genPaperHtml(papertitle, paperlink, authors, booktitle, papernote = '', withSlides = '') {
+                	var textWCite = '<p class="paper" id="_paperid">\
+                						<papertitle>\
+                							<a href="papers/_paperlink.pdf">\
+                								_papertitle\
+                							</a>\
+                							_paperslides\
+                						</papertitle><br>\
+                						<authors>\
+                							_authors\
+                						</authors><br>\
+                						<booktitle>\
+                							_booktitle\
+                						</booktitle>\
+                						_papernote\
+                						<a id = "_citelink"></a>\
+                					</p>';
+                    
+                    if (withSlides == '') {
+                        textWCite = textWCite.replace('_paperslides', '');
+                    }
+                    else {
+                        textWCite = textWCite.replace('_paperslides', ' (<a href="papers/_paperlink-slides._withSlides">slides</a>)');
+                    }
+
+                    textWCite = textWCite.replace('_withSlides', withSlides);                    
+                	textWCite = textWCite.replace('_papertitle', papertitle);
+                	textWCite = textWCite.replace('_paperlink', paperlink);
+                	textWCite = textWCite.replace('_paperlink', paperlink);
+                	textWCite = textWCite.replace('_paperid', paperlink);
+                	textWCite = textWCite.replace('_authors', authors);
+                	textWCite = textWCite.replace('_booktitle', booktitle);
+                
+                	if (papernote !== '') {
+                		textWCite = textWCite.replace('_papernote', '<papernote>(' + papernote + ')</papernote>');
+                	}
+                	else {
+                		textWCite = textWCite.replace('_papernote', '');
+                	}
+                
+                	textWCite = textWCite.replace('_citelink', paperlink + '_cites');
+                	
+                	document.write(textWCite);
+                }
+
+                function showText(divId, text) {
+		           console.log(divId);
+		           console.log(text);
+		           $(divId).text(text);
+		    	}
+
+		    	function runPHP(divId, phpUrl) {
+		           console.log(divId);
+		           console.log(phpUrl);
+		           $(divId).load(phpUrl);
+		    	}
+		    	
+		    	function genCites(papertitle, paperlink, otherKeywords = 'Bolin Ding') {
+		    	   $('#'+paperlink+'_cites').load('citation.php?q='+encodeURI(papertitle + ' ' + otherKeywords));
+		    	}
+		    	
+		    	function genEmbeddedPaperHtml(papertitle, paperlink, authors, booktitle, papernote = '', withCite = true, withSlides = '') {
+		    	    genPaperHtml(papertitle, paperlink, authors, booktitle, papernote, withSlides);
+		    	    if (withCite) {
+		    	        genCites(papertitle, paperlink);
+		    	    }
+		    	}
+
+                function genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote) {
+                	var textWCite = '<p class="paper" id="_paperid">\
+                						<papertitle>\
+                							<a href="papers/_paperlink.pdf">\
+                								_papertitle\
+                							</a>\
+                						</papertitle><br>\
+                						<authors>\
+                							_authors.\
+                						</authors>\
+                						<booktitle>\
+                							_booktitle\
+                						</booktitle><br>\
+                						<smallnote>\
+                						    _papernote\
+                						</smallnote>\
+                					</p>';
+                    
+                	textWCite = textWCite.replace('_papertitle', papertitle);
+                	textWCite = textWCite.replace('_paperlink', paperlink);
+                	textWCite = textWCite.replace('_paperid', paperlink);
+                	textWCite = textWCite.replace('_authors', authors);
+                	textWCite = textWCite.replace('_booktitle', booktitle);
+                    textWCite = textWCite.replace('_papernote', papernote);
+
+                	document.write(textWCite);
+                }
+            </script>
+           
+            
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/BolinDing.jpg" alt="Bolin Ding" /></span>
+							<h1 id="title">Bolin Ding</h1>							
+							<h2>Alibaba Group</h2>
+						</div>
+						<p>
+							<a href="mailto:bolin.ding@alibaba-inc.com" class="icon fa-envelope" target="_blank">&nbsp&nbspEmail</a>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						   	<a href="http://maps.google.com/?q=Bellevue, WA 98004, USA" class="icon fa-map-marker" target="_blank">&nbsp&nbspAddress</a>
+						</p>
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li>
+									<a href="index.html" id="about-link"><span class="icon fa-home">About Me</span></a>
+								</li>
+								<li>
+									<a href="publications.html#top" id="publications-link" class="skel-layers-ignoreHref"><span class="icon fa-folder-open">Publications</span></a>
+								</li>								
+								<li>
+									<a href="publications.html#selected" id="selected-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
+										<span class="label">Selected Publications</span>
+									</a>
+									<a href="publications-fav.html" id="favorites-link" class="skel-layers-ignoreHref active" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
+										<span class="label">My Favorites</span>
+									</a>
+								</li>
+								<li>
+									<a href="students.html" id="students-link"><span class="icon fa-users">For Students</span></a>
+								</li>
+								<li>
+									<a href="activities.html" id="activities-link"><span class="icon fa-th">Activities</span></a>
+								</li>
+							</ul>
+						</nav>
+				</div>
+
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://dblp.uni-trier.de/pers/hd/d/Ding:Bolin" class="icon fa-book" target="_blank">&nbsp&nbspDBLP<span class="label">DBLP</span></a></li>
+							<li><a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" class="icon fa-google" target="_blank">&nbsp&nbspGoogle Scholar<span class="label">Google Scholar</span></a></li>
+							<li><a href="https://www.linkedin.com/in/bolin-ding-50a0119/" class="icon fa-linkedin" target="_blank">&nbsp&nbspLinkedIn<span class="label">LinkedIn</span></a></li>
+						</ul>						
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						
+					</section>
+
+				<!-- Publications -->
+					<section class="three">
+						<div id="favorites" class="container">
+							<h2>My Favorite Publications</h2>
+
+                            <p>
+                                I want to keep this list as short as possible, with preference for more recent ones. They are a selection of papers which I like the most (in terms of techniques, topics, and/or personal taste) and I contribute "a lot" to. I equally like some of other papers, but they will not be listed here if I'm not one of the major contributors.
+                            </p>
+
+							<script>
+				    				papertitle = 'Lero: A Learning-to-Rank Query Optimizer';
+			    					paperlink  = 'vldb23lero';
+		    						authors    = 'With Rong Zhu, Wei Chen, Xingguang Chen, Andreas Pfadler, Ziniu Wu, and Jingren Zhou';
+	    							booktitle  = 'VLDB 2023';
+    							    papernote  = '<tag>[ai4system][systems][machine learning]</tag> As what the title suggests, a learning-to-rank query optimizer.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+				    				papertitle = 'Studying the Impact of Data Disclosure Mechanism in Recommender Systems via Simulation';
+			    					paperlink  = 'tois23privacyinrecsys';
+		    						authors    = 'With Ziqian Chen, Fei Sun, Yifan Tang, Haokun Chen, and Jinyang Gao';
+	    							booktitle  = 'Transactions on Information Systems 2023';
+    							    papernote  = '<tag>[ai4socialscience]</tag> Using a platform with multi-agent reinforcement learning agents to study the implications of different privacy protection policies on social welfare.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'FederatedScope: A Flexible Federated Learning Platform for Heterogeneity';
+								    paperlink  = 'vldb23fs';
+								    authors    = 'With Yuexiang Xie, Zhen Wang, Dawei Gao, Daoyuan Chen, Liuyi Yao, Weirui Kuang, Yaliang Li, and Jingren Zhou';
+								    booktitle  = 'VLDB 2023';
+								    papernote  = '<tag>[systems]</tag> The <a href="https://federatedscope.io/">FederatedScope</a> project.';
+								    
+								    genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'FederatedScope-GNN: Towards a Unified, Comprehensive and Efficient Package for Federated Graph Learning';
+								    paperlink  = 'kdd22fsgnn';
+								    authors    = 'With Zhen Wang, Weirui Kuang, Yuexiang Xie, Liuyi Yao, Yaliang Li, and Jingren Zhou';
+								    booktitle  = 'KDD 2022';
+								    papernote  = '<tag>[systems]</tag> The <a href="https://federatedscope.io/">FederatedScope</a> project.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'iFlood: A Stable and Effective Regularizer';
+								    paperlink  = 'iclr22iflood';
+								    authors    = 'With Yuexiang Xie, Zhen Wang, Yaliang Li, Ce Zhang, and Jingren Zhou';
+								    booktitle  = 'ICLR 2022';
+								    papernote  = '<tag>[algorithms][machine learning]</tag> Proposing a simple and sweet regularizer which forces a loss gap from perferctly fitting the training data.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Federated Matrix Factorization with Privacy Guarantee';
+								    paperlink  = 'vldb22fedmf';
+								    authors    = 'With Zitao Li, Ce Zhang, Ninghui Li, and Jingren Zhou';
+								    booktitle  = 'VLDB 2022';
+								    papernote  = '<tag>[data privacy][algorithms]</tag> How to factorize matrixes under differential privacy in different settings of federated learning.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Learning to be a Statistician: Learned Estimator for Number of Distinct Values';
+								    paperlink  = 'vldb22ndvest';
+								    authors    = 'With Renzhi Wu, Xu Chu, Zhewei Wei, Xiening Dai, Tao Guan, and Jingren Zhou';
+								    booktitle  = 'VLDB 2022';
+								    papernote  = '<tag>[ai4system][machine learning]</tag> Learning an (NDV) estimator which is independent of the training data\'s distribuion (and thus generalizes well by its nature).';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+
+							<script>
+								    papertitle = 'Linear and Range Counting under Metric-based Local Differential Privacy';
+								    paperlink  = 'isit20blowfishldp';
+								    authors    = 'with Zhuolun Xiang, Xi He, and Jingren Zhou';
+								    booktitle  = 'ISIT 2020';
+								    papernote  = '<tag>[data privacy][algorithms]</tag> Making differentially private range quries less sensitive to the domain size and dimensionality (in terms of error) under a relaxed version of differential privacy.';
+							    
+								    genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote, true, 'pptx');
+							</script>
+
+							<script>
+								    papertitle = 'Answering Multi-Dimensional Analytical Queries under Local Differential Privacy';
+								    paperlink  = 'sigmod19ldpmda';
+								    authors    = 'With Tianhao Wang, Jingren Zhou, Cheng Hong, Zhicong Huang, Ninghui Li, and Somesh Jha';
+								    booktitle  = 'SIGMOD 2019';
+								    papernote  = '<tag>[data privacy][algorithms]</tag> Answering multi-dimensional range queries under local differential privacy, with the best possible accuracy (conjecture).';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Collecting Telemetry Data Privately';
+								    paperlink  = 'nips17dptelemetry';
+								    authors    = 'With Janardhan Kulkarni, and Sergey Yekhanin';
+								    booktitle  = 'NIPS 2017';
+								    papernote  = '<tag>[data privacy][algorithms]</tag> Collecting multi-dimensional telemetry data repeatively under local differential privacy.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Sample + Seek: Approximating Aggregates with Distribution Precision Guarantee';
+								    paperlink  = 'sigmod16sampleseek';
+								    authors    = 'With Silu Huang, Surajit Chaudhuri, Kaushik Chakrabarti, and Chi Wang';
+								    booktitle  = 'SIGMOD 2016';
+								    papernote  = '<tag>[algorithms]</tag> Approximate query processing with accuracy guarantees by utilizing samples and indexes at the same time.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Differentially Private Data Cubes: Optimizing Noise Sources and Consistency';
+								    paperlink  = 'sigmod11privatecube';
+								    authors    = 'With Marianne Winslett, Jiawei Han, and Zhenhui Li';
+								    booktitle  = 'SIGMOD 2011';
+								    papernote  = '<tag>[data privacy][algorithms]</tag> How to release a data cube under differential privacy, by optimzing the noise distribution and enforcing consistency across subspaces.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Fast Set Intersection in Memory';
+								    paperlink  = 'vldb11intersection';
+								    authors    = 'With Arnd Christian König';
+								    booktitle  = 'VLDB 2011';
+								    papernote  = '<tag>[algorithms]</tag> How to compute the intersection (or union) of two (or more) sets? With bitwise operations, theoretical guarantees, and a fast implementation.';
+								    
+								    genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'Finding Top-k Min-Cost Connected Trees in Databases';
+								    paperlink  = 'icde07steiner';
+								    authors    = 'With Jeffrey Xu Yu, Shan Wang, Lu Qin, Xiao Zhang, and Xuemin Lin';
+								    booktitle  = 'ICDE 2007';
+								    papernote  = '<tag>[algorithms]</tag> Re-inventing an FPT algorithm for the group steiner tree problem and applying it in keyword search.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+							<script>
+								    papertitle = 'TwigList: Make Twig Pattern Matching Fast';
+								    paperlink  = 'dasfaa07twiglist';
+								    authors    = 'With Lu Qin and Jeffrey Xu Yu';
+								    booktitle  = 'DASFAA 2007';
+								    papernote  = '<tag>[algorithms]</tag> The good old times with my buddy.';
+								    
+							        genFavPaperHtml(papertitle, paperlink, authors, booktitle, papernote);
+							</script>
+
+                        <!-- Debug -->
+							<a id = 'test'></a>
+    						<script type="text/javascript" src="https://scholar.google.com/citations?view_op=view_citation&citation_for_view=MoJFIiQAAAAJ:HE397vMXCloC"></script>
+    						<script>
+				                // document.getElementById("test").innerHTML = '<p>Test Text</p>';
+				                // showText('#test', '<p>Test Text</p>');
+				                // runPHP('#test', 'citation.php');
+			                </script>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright <li>&copy; Untitled. All rights reserved.</li> -->
+					<ul class="copyright">						
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				
+				<!--<script src="//t1.extreme-dm.com/f.js" id="eXF-atlas198-0" async defer></script>-->
+			</div>
+			
+	</body>
+</html>

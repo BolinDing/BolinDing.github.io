@@ -1,0 +1,117 @@
+<?php
+#ini_set(default_charset, "utf-8");
+#header('Content-Type: application/json; charset=utf-8');
+header('Content-Type: application/json');
+
+$url0 = "http://www.google.com/search?q=";
+
+/* Debug */
+$url1 = "http://www.google.com/search?q=Collecting+Telemetry+Data+Privately";
+$url2 = "http://scholar.google.com/citations?view_op=view_citation&citation_for_view=MoJFIiQAAAAJ:HE397vMXCloC";
+$url3 = "http://scholar.google.com/citations?user=AjYkTi8AAAAJ";
+$url4 = "http://www.bolin-ding.com/index.html";
+$url5 = "http://www.google.com/search?q=Collecting Telemetry Data Privately Bolin Ding";
+
+
+/* Debug */
+function php_test($str) {
+    return $str;
+}
+
+/* Debug */
+function get_url_response_old($url) {
+    $handle = curl_init($url);
+    curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
+    
+    /* Get the HTML or whatever is linked in $url. */
+    $response = curl_exec($handle);
+    
+    /* Check for 404 (file not found). */
+    $httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+    
+    curl_close($handle);
+    
+    echo $httpCode;
+    return $response;
+}
+
+function get_url_response_new($url) {
+    // include snoopy library
+    require('Snoopy.class.php');
+    // initialize snoopy object
+    $snoopy = new Snoopy;
+    // read webpage content
+    $snoopy->fetch($url);
+    // save it to $lines_string
+    $lines_string = $snoopy->results;
+    //output, you can also save it locally on the server
+    return $lines_string;
+}
+
+/* Get the reponse from an URL in a synchronized way */
+function get_url_response($url) {
+    $opts = array(
+      'http'=>array(
+        'method'=>"GET",
+        'header'=>"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8\r\n".
+                  "Accept-language: en-US,en;q=0.8\r\n".
+                  "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36\r\n".
+                  "Upgrade-Insecure-Requests: 1\r\n"
+      )
+    );
+    $context = stream_context_create($opts);
+    
+    // $response = file_get_contents($url, false, $context);
+    
+    try {
+        $response = file_get_contents($url, false, $context);
+
+        if ($response === false) {
+            $response = "Error!<br>";
+        }
+    } catch (Exception $e) {
+        $response = "Exception!<br>";
+    }
+    
+    return $response;
+}
+
+/* Parser:
+    Parse and generate citation info (the number and the list of citations) 
+    from a Google search page with a paper title as keywords:
+    e.g., $url = 'https://www.google.com/search?q=collecting+telemetry+data+privately'
+*/
+function get_cites($url) {
+    $page = get_url_response($url);
+    
+    $ind_citenum = strpos($page, '>Cited by ');
+    if ($ind_citenum === false) {
+        return '';
+    }
+    $ind_citenum_end = strpos($page, '<', $ind_citenum);
+    
+    $cite_text = substr($page, $ind_citenum + 10, $ind_citenum_end - $ind_citenum - 10);
+    
+    $page_left = substr($page, 0, $ind_citenum);
+    $ind_cites = strrpos($page_left, 'cites=');
+    $ind_cites_end = strpos($page_left, '"', $ind_cites);
+    
+    $cite_link = substr($page_left, $ind_cites, $ind_cites_end - $ind_cites);
+    $cite_link = 'http://scholar.google.com/scholar?'.$cite_link;
+    
+    // return '<a href="'.$cite_link.'"> cited by '.$cite_text.'</a>';
+    return '<a href="'.$url.'"> cited by '.$cite_text.'</a>';
+}
+
+ini_set('allow_url_fopen',1);
+
+if (!isset($_GET["q"]))
+	exit -1;
+
+echo get_cites($url0.urlencode($_GET["q"]));
+
+// echo get_cites($url4);
+
+// echo php_test($url0.urlencode($_GET["q"]));
+
+?>
