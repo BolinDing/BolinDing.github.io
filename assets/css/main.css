@@ -141,7 +141,7 @@
 	}
 
 	.container authors{
-		font-size: 1em;
+		font-size: 0.8em;
 	}
 
 	.container booktitle{
@@ -166,6 +166,19 @@
 		line-height: 0.1;
 		font-weight: 900;
 		color: rgb(200, 0, 100);
+	}
+
+	.container news{
+		font-size: 1em;
+		line-height: 0.1;
+		font-weight: 900;
+		color: rgb(200, 0, 100);
+	}
+
+	.container description{
+		font-size: 0.9em;
+		line-height: 0.1;
+		font-weight: 400;
 	}
 
 	.container h3{
@@ -1642,7 +1655,7 @@
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.6em;
 		color: #888;
 	}
 
@@ -1668,7 +1681,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		color: #666;
-		line-height: 1.5em;
+		line-height: 1.6em;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1683,6 +1696,7 @@
 	h2 {
 		font-size: 2em;
 		letter-spacing: -1px;
+		font-weight: 400;
 	}
 
 		h2.alt {
@@ -1694,7 +1708,8 @@
 			}
 
 	h3 {
-		font-size: 1.5em;
+		font-size: 1.2em;
+		font-weight: 600;
 	}
 
 	header {
@@ -1748,7 +1763,7 @@
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 2px #9ececc;
 	}
 
 	blockquote {
