@@ -7,7 +7,8 @@
       "Bash(python:*)",
       "Bash(powershell -command:*)",
       "Bash(dir:*)",
-      "WebFetch(domain:scholar.google.com)"
+      "WebFetch(domain:scholar.google.com)",
+      "WebSearch"
     ]
   }
 }
