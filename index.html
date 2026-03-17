@@ -1,330 +1,1623 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html xmlns="http://www.w3.org/1999/html">
-	<head>
-		<title>Bolin Ding's Homepage</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Bolin Ding — Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">BD.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#students">For Students</a></li>
+                <li><a href="#awards-service">Awards & Service</a></li>
+            </ul>
+        </div>
+    </nav>
 
-		<!-- Header -->
-			<div id="header">
+    <header class="hero">
+        <div class="container">
+            <div class="hero-left">
+                <div class="hero-image">
+                    <img src="images/BolinDing.jpg" alt="Bolin Ding">
+                </div>
+                <div class="hero-content">
+                    <span class="hero-label">Researcher & Engineer</span>
+                    <h1 class="hero-name">Bolin <em>Ding</em></h1>
+                    <p class="hero-title">Senior Director and Research Scientist<br>Data Analytics and Intelligence Lab (DAIL)<br>Tongyi Lab, Alibaba Group</p>
+                    <div class="scholar-stats">
+                        <a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" target="_blank" class="stat-item">
+                            <span class="stat-number" id="citations">17,795</span>
+                            <span class="stat-label">Citations</span>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" target="_blank" class="stat-item">
+                            <span class="stat-number" id="h-index">61</span>
+                            <span class="stat-label">h-index</span>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" target="_blank" class="stat-item">
+                            <span class="stat-number" id="i10-index">170</span>
+                            <span class="stat-label">i10-index</span>
+                        </a>
+                    </div>
+                    <a href="#publications" class="hero-cta">
+                        View Publications
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-links">
+                    <a href="mailto:bolin.ding@alibaba-inc.com" class="hero-link-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        bolin.ding@alibaba-inc.com
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" target="_blank" class="hero-link-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+                        Google Scholar
+                    </a>
+                    <a href="https://dblp.uni-trier.de/pers/hd/d/Ding:Bolin" target="_blank" class="hero-link-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.075.002c-.096.013-.154.063-.154.063L6.921 4.4l-.096.288-4.985 1.56s-.101.04-.158.135c-.058.095-.04.19-.04.19L4.63 13.14 1.74 18.14s-.06.088-.042.19c.016.1.084.15.084.15l5.09 3.781c.063.047.146.048.24.035a.38.38 0 00.209-.13l3.098-4.655 4.525 3.363s.085.054.19.043.16-.085.16-.085l5.18-7.563.002-.009.007-.01a.26.26 0 00.038-.128.227.227 0 00-.044-.15L17.205 8.31l.268-.07h.002l.002-.002.01-.006a.093.093 0 00.02-.014.178.178 0 00.04-.06.2.2 0 00.014-.054.122.122 0 000-.042L14.222.252s-.035-.1-.113-.158C14.031.036 13.94.01 13.94.01L3.31.001A.393.393 0 003.075 0z"/></svg>
+                        DBLP
+                    </a>
+                    <a href="https://www.linkedin.com/in/bolin-ding-50a0119/" target="_blank" class="hero-link-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right" id="about">
+                <div class="hero-about">                    
+                    <div class="about-text">
+                        <p>My work is generally about making systems intelligent and efficient with machine learning and optimization techniques. My current research interests include programming frameworks for building LLM agents, systems and algorithms for tuning agent models, efficient data pipelines for training LLMs and agent models, and building novel agent applications (e.g., for data analytics and social science).</p>
+                        <p>Previously, I also worked on database systems, data privacy, data pricing, and federated learning.</p>
+                        <p>I lead several projects including <a href="https://agentscope.io/">AgentScope</a> (agent programming framework, runtime & infra of agent applications, agent memory, and agent tuning) and <a href="https://github.com/datajuicer">Data-Juicer</a> (multimodal data processing for LLMs and agents), which have been widely adopted in production. Some earlier research initiatives include <a href="https://github.com/alibaba/pilotscope">PilotScope</a> (AI4DB middleware) and <a href="https://federatedscope.io">FederatedScope</a> (federated learning platform).</p>
+                        <p class="about-highlight">I'm always interested in discussing research collaborations and speaking opportunities. We are hiring research scientists, engineers, and research interns for our lab!</p>
+                    </div>
+                    <aside class="about-sidebar">
+                        <div>
+                            <h4>Experience</h4>
+                            <ul>
+                                <li>Alibaba Group (2017-present)</li>
+                                <li>Microsoft Research (2012-2017)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Education</h4>
+                            <ul>
+                                <li>Ph.D., University of Illinois Urbana-Champaign (Advisor: Jiawei Han)</li>
+                                <li>M.Phil., The Chinese University of Hong Kong (Advisor: Jeffrey Xu Yu)</li>
+                                <li>B.S., Renmin University of China (Advisor: Qing Zhu & Shan Wang)</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </header>
 
-				<div class="top">
+    <section id="research">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">Research</span>
+                <div>
+                    <h2 class="section-title">Research Interests</h2>
+                    <p class="section-subtitle">Making systems intelligent and efficient with machine learning and optimization techniques.</p>
+                </div>
+            </div>
+            <div class="interests-grid">
+                <div></div>
+                <div class="interests-list">
+                    <article class="interest-item reveal">
+                        <span class="interest-number">01</span>
+                        <h3 class="interest-title">Agent Programming Frameworks & Infrastructure</h3>
+                        <p class="interest-desc">Programming frameworks, runtime, and infrastructure for building LLM agent applications, including agent memory and multi-agent coordination (e.g., <a href="https://agentscope.io/">AgentScope</a>).</p>
+                    </article>
+                    <article class="interest-item reveal">
+                        <span class="interest-number">02</span>
+                        <h3 class="interest-title">Agent & LLM Tuning</h3>
+                        <p class="interest-desc">Systems and algorithms for tuning agent models and large language models, including preference optimization and scaling laws for test-time compute.</p>
+                    </article>
+                    <article class="interest-item reveal">
+                        <span class="interest-number">03</span>
+                        <h3 class="interest-title">Data Pipelines for LLMs & Agents</h3>
+                        <p class="interest-desc">Efficient multimodal data processing pipelines for training LLMs and agent models at scale (e.g., <a href="https://github.com/datajuicer">Data-Juicer</a>).</p>
+                    </article>
+                    <article class="interest-item reveal">
+                        <span class="interest-number">04</span>
+                        <h3 class="interest-title">Agent Applications</h3>
+                        <p class="interest-desc">Novel agent applications, particularly for data analytics and social science, including Text-to-SQL, AI4DB, and large-scale multi-agent simulation.</p>
+                    </article>
+                    <article class="interest-item reveal">
+                        <span class="interest-number">05</span>
+                        <h3 class="interest-title">Earlier Work: Databases, Privacy & Federated Learning</h3>
+                        <p class="interest-desc">Database systems, data privacy, data pricing, and federated learning (e.g., <a href="https://github.com/alibaba/pilotscope">PilotScope</a>, <a href="https://federatedscope.io">FederatedScope</a>).</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/BolinDing.jpg" alt="Bolin Ding" /></span>
-							<h1 id="title">Bolin Ding</h1>							
-							<h2>Alibaba Group</h2>
-						</div>
-						<p>
-							<a href="mailto:bolin.ding@alibaba-inc.com" class="icon fa-envelope" target="_blank">&nbsp&nbspEmail</a>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						   	<a href="http://maps.google.com/?q=Bellevue, WA 98004, USA" class="icon fa-map-marker" target="_blank">&nbsp&nbspAddress</a>
-						</p>
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">Projects</span>
+                <div>
+                    <h2 class="section-title">Active Projects</h2>
+                    <p class="section-subtitle">Major research initiatives and open-source platforms.</p>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div></div>
+                <div class="projects-list">
+                    <article class="project-card reveal">
+                        <h3 class="project-title"><a href="https://github.com/modelscope/agentscope" target="_blank">AgentScope</a></h3>
+                        <p class="project-desc">A flexible yet robust multi-agent platform that enables agent-oriented programming for building diverse LLM applications, including very large-scale multi-agent simulations.</p>
+                        <p class="project-venue">arXiv 2024</p>
+                    </article>
+                    <article class="project-card reveal">
+                        <h3 class="project-title"><a href="https://github.com/modelscope/data-juicer" target="_blank">Data-Juicer</a></h3>
+                        <p class="project-desc">A one-stop multimodal data processing system for large language models, providing 50+ core operators, data-model co-development, and cloud-scale adaptive processing.</p>
+                        <p class="project-venue">SIGMOD 2024, NeurIPS 2025 (Spotlight), ICML 2025 (Spotlight)</p>
+                    </article>
+                    <article class="project-card reveal">
+                        <h3 class="project-title">LLM4Analytics</h3>
+                        <p class="project-desc">Tools for translating natural language to executable analytics actions, including Text-to-SQL benchmarks and unified data manipulation frameworks empowered by large language models.</p>
+                        <p class="project-venue">VLDB 2024, MLSys 2024</p>
+                    </article>
+                    <article class="project-card reveal">
+                        <h3 class="project-title">AI4SocialScience</h3>
+                        <p class="project-desc">Interdisciplinary research combining economics, social science, and machine learning through agent-based simulation, auction design, and information design.</p>
+                        <p class="project-venue">ICML 2024/2025, SODA 2023, NAACL 2025</p>
+                    </article>
+                    <article class="project-card reveal">
+                        <h3 class="project-title"><a href="https://github.com/alibaba/pilotscope" target="_blank">PilotScope</a></h3>
+                        <p class="project-desc">An AI4DB middleware system that steers databases with machine learning drivers, enabling easy deployment of learned database components in real database systems.</p>
+                        <p class="project-venue">VLDB 2024</p>
+                    </article>
+                    <article class="project-card reveal">
+                        <h3 class="project-title"><a href="https://github.com/alibaba/FederatedScope" target="_blank">FederatedScope</a></h3>
+                        <p class="project-desc">A comprehensive federated learning platform with packages for privacy-preserving learning, GNN federation, and LLM fine-tuning in federated settings.</p>
+                        <p class="project-venue">VLDB 2023, KDD 2022 (Best Paper in ADS), KDD 2024</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 
-								Prologue's nav expects links in one of two formats:
+    <section id="publications" class="publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">Publications</span>
+                <div>
+                    <h2 class="section-title">Selected Publications</h2>
+                    <p class="section-subtitle">A selection of recent research contributions.</p>
+                </div>
+            </div>
+            <div class="pub-year-index">
+                <a href="#pub-2026">2026</a>
+                <a href="#pub-2025">2025</a>
+                <a href="#pub-2024">2024</a>
+                <a href="#pub-2023">2023</a>
+                <a href="#pub-2022">2022</a>
+                <a href="#pub-2021">2021</a>
+                <a href="#pub-2020">2020</a>
+                <a href="#pub-2019">2019</a>
+                <a href="#pub-2018">2018</a>
+                <a href="#pub-2017">2017</a>
+                <a href="#pub-2016">2016</a>
+                <a href="#pub-2015">2015</a>
+                <a href="#pub-2014">2014</a>
+                <a href="#pub-2013">2013</a>
+                <a href="#pub-2012">2012</a>
+                <a href="#pub-2011">2011</a>
+                <a href="#pub-2010">2010</a>
+                <a href="#pub-2009">2009</a>
+                <a href="#pub-2008">2008</a>
+                <a href="#pub-2007">2007</a>
+                <a href="#pub-2006">2006</a>
+            </div>
+            <div class="pub-list">
+                    <!-- 2026 -->
+                    <div class="pub-year-group" id="pub-2026">
+                        <h3 class="pub-year-header">2026</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/cidr26dataconnector.pdf">BridgeScope: A Universal Toolkit for Bridging Large Language Models and Databases</a></h3>
+                                <p class="pub-authors">Lianggui Weng, Dandan Liu, Rong Zhu, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">CIDR 2026</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod26learnedqo.pdf">Learned Query Optimizer in Alibaba MaxCompute: Challenges, Analysis, and Solutions</a></h3>
+                                <p class="pub-authors">Lianggui Weng, Dandan Liu, Wenzhuang Zhu, Rong Zhu, Junzheng Zheng, Bolin Ding, Zhiguo Zhang, Jingren Zhou</p>
+                                <p class="pub-venue">SIGMOD 2026 (industrial track)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod26ambisql.pdf">AmbiSQL: Interactive Ambiguity Detection and Resolution for Text-to-SQL</a></h3>
+                                <p class="pub-authors">Zhongjun Ding, Yin Lin, Tianjing Zeng, Rong Zhu, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">SIGMOD 2026 (demo)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr26sftrl.pdf">On-Policy RL Meets Off-Policy Experts: Harmonizing Supervised Fine-Tuning and Reinforcement Learning via Dynamic Weighting</a></h3>
+                                <p class="pub-authors">Wenhao Zhang, Yuexiang Xie, Yuchang Sun, Yanxi Chen, Guoyin Wang, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">ICLR 2026</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr26sparse.pdf">Sparse but Critical: A Token-Level Analysis of Distributional Shifts in RLVR Fine-Tuning of LLMs</a></h3>
+                                <p class="pub-authors">Haoming Meng, Kexin Huang, Shaohang Wei, Chiyu Ma, Shuo Yang, Xue Wang, Guoyin Wang, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">ICLR 2026</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr26rlvr.pdf">Beyond Magnitude: Leveraging Direction of RLVR Updates for LLM Reasoning</a></h3>
+                                <p class="pub-authors">Kexin Huang, Haoming Meng, Junkang Wu, Jinda Lu, Chiyu Ma, Ziqian Chen, Xue Wang, Bolin Ding, Jiancan Wu, Xiang Wang, Xiangnan He, Guoyin Wang, Jingren Zhou</p>
+                                <p class="pub-venue">ICLR 2026</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr26grpovariants.pdf">Group-Relative REINFORCE Is Secretly an Off-Policy Algorithm: Demystifying Some Myths About GRPO and Its Friends</a></h3>
+                                <p class="pub-authors">Chaorui Yao, Yanxi Chen, Yuchang Sun, Yushuo Chen, Wenhao Zhang, Xuchen Pan, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">ICLR 2026</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr26bots.pdf">BOTS: A Unified Framework for Bayesian Online Task Selection in LLM Reinforcement Finetuning</a></h3>
+                                <p class="pub-authors">Qianli Shen, Daoyuan Chen, Yilun Huang, Zhenqing Ling, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">ICLR 2026</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-								1. Hash link (scrolls to a different section within the page)
+                    <!-- 2025 -->
+                    <div class="pub-year-group" id="pub-2025">
+                        <h3 class="pub-year-header">2025</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips25dj.pdf">Data-Juicer 2.0: Cloud-Scale Adaptive Data Processing for and with Foundation Models</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Yilun Huang, Xuchen Pan, Jiang Nana, Haibin Wang, Yilei Zhang, Ce Ge, Yushuo Chen, Wenhao Zhang, Zhijian Ma, Jun Huang, Wei Lin, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">NeurIPS 2025 (Spotlight)</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2501.14755" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips25repo.pdf">RePO: Understanding Preference Learning Through ReLU-Based Optimization</a></h3>
+                                <p class="pub-authors">Junkang Wu, Kexin Huang, Xue Wang, Jinyang Gao, Bolin Ding, Jiancan Wu, Xiangnan He, Xiang Wang</p>
+                                <p class="pub-venue">NeurIPS 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips25llmscaling.pdf">Provable Scaling Laws for the Test-Time Compute of Large Language Models</a></h3>
+                                <p class="pub-authors">Yanxi Chen, Xuchen Pan, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">NeurIPS 2025</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2411.19477" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml25djsandbox.pdf">Data-Juicer Sandbox: A Feedback-Driven Suite for Multimodal Data-Model Co-development</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Haibin Wang, Yilun Huang, Ce Ge, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">ICML 2025 (Spotlight)</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2407.11784" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml25nash.pdf">Learning Bayesian Nash Equilibrium in Auction Games via Approximate Best Response</a></h3>
+                                <p class="pub-authors">Kexin Huang, Ziqian Chen, Xue Wang, Chongming Gao, Jinyang Gao, Bolin Ding, Xiang Wang</p>
+                                <p class="pub-venue">ICML 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml25alignment.pdf">Larger or Smaller Reward Margins to Select Preferences for LLM Alignment?</a></h3>
+                                <p class="pub-authors">Kexin Huang, Junkang Wu, Ziqian Chen, Xue Wang, Jinyang Gao, Bolin Ding, Jiancan Wu, Xiangnan He, Xiang Wang</p>
+                                <p class="pub-venue">ICML 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml25alphadpo.pdf">AlphaDPO: Adaptive Reward Margin for Direct Preference Optimization</a></h3>
+                                <p class="pub-authors">Junkang Wu, Xue Wang, Zhengyi Yang, Jiancan Wu, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He</p>
+                                <p class="pub-venue">ICML 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/cvpr25imgdiff.pdf">Img-Diff: Contrastive Data Synthesis for Multimodal Large Language Models</a></h3>
+                                <p class="pub-authors">Qirui Jiao, Daoyuan Chen, Yilun Huang, Bolin Ding, Yaliang Li, Ying Shen</p>
+                                <p class="pub-venue">CVPR 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/cvpr25lvlm.pdf">Provoking Multi-modal Few-Shot LVLM via Exploration-Exploitation In-Context Learning</a></h3>
+                                <p class="pub-authors">Cheng Chen, Yunpeng Zhai, Yifan Zhao, Jinyang Gao, Bolin Ding, Jia Li</p>
+                                <p class="pub-venue">CVPR 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb25price.pdf">PRICE: A Pretrained Model for Cross-database Cardinality Estimation</a></h3>
+                                <p class="pub-authors">Tianjing Zeng, Junwei Lan, Jiahong Ma, Wenqing Wei, Rong Zhu, Yingli Zhou, Pengfei Li, Bolin Ding, Defu Lian, Zhewei Wei, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr25agentplanning.pdf">Agent-Oriented Planning in Multi-Agent Systems</a></h3>
+                                <p class="pub-authors">Ao Li, Yuexiang Xie, Songze Li, Fugee Tsung, Bolin Ding, Yaliang Li</p>
+                                <p class="pub-venue">ICLR 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr25alignment.pdf">Towards Robust Alignment of Language Models: Distributionally Robustifying Direct Preference Optimization</a></h3>
+                                <p class="pub-authors">Junkang Wu, Yuexiang Xie, Zhengyi Yang, Jiancan Wu, Jiawei Chen, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He</p>
+                                <p class="pub-venue">ICLR 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr25longcontext.pdf">What is Wrong with Perplexity for Long-context Language Modeling?</a></h3>
+                                <p class="pub-authors">Lizhe Fang, Yifei Wang, Zhaoyang Liu, Chenheng Zhang, Stefanie Jegelka, Jinyang Gao, Bolin Ding, Yisen Wang</p>
+                                <p class="pub-venue">ICLR 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/acl25graphagents.pdf">LLM-Based Multi-Agent Systems are Scalable Graph Generative Models</a></h3>
+                                <p class="pub-authors">Jiarui Ji, Runlin Lei, Jialing Bi, Zhewei Wei, Xu Chen, Yankai Lin, Xuchen Pan, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">ACL Findings 2025</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2410.09824" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/acl25tool.pdf">Enhancing Tool Learning in Large Language Models with Hierarchical Error Checklists</a></h3>
+                                <p class="pub-authors">Yue Cui, Liuyi Yao, Shuchang Tao, Weijie Shi, Yaliang Li, Bolin Ding, Xiaofang Zhou</p>
+                                <p class="pub-venue">ACL Findings 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/emnlp25llmreasoning.pdf">Advancing Reasoning with Off-the-Shelf LLMs: A Semantic Structure Perspective</a></h3>
+                                <p class="pub-authors">Pengfei He, Zitao Li, Yue Xing, Yaliang Li, Jiliang Tang, Bolin Ding</p>
+                                <p class="pub-venue">EMNLP Findings 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/naacl25agents.pdf">GenSim: A General Social Simulation Platform with Large Language Model based Agents</a></h3>
+                                <p class="pub-authors">Jiakai Tang, Heyang Gao, Xuchen Pan, Lei Wang, Haoran Tan, Dawei Gao, Yushuo Chen, Xu Chen, Yankai Lin, Yaliang Li, Bolin Ding, Jingren Zhou, Jun Wang, Ji-Rong Wen</p>
+                                <p class="pub-venue">NAACL 2025 (Demo)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde25bargaining.pdf">A Bargaining-based Approach for Feature Trading in Vertical Federated Learning</a></h3>
+                                <p class="pub-authors">Yue Cui, Liuyi Yao, Zitao Li, Yaliang Li, Keqin Zhong, Bingyi Liu, Bolin Ding, Xiaofang Zhou</p>
+                                <p class="pub-venue">ICDE 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sdm25llm4jd.pdf">Language Models are Explorers for Join Discovery on Data Lakes</a></h3>
+                                <p class="pub-authors">Yaohua Wang, Bolin Ding, Rong Zhu, Haibin Wang, Zhijian Ma, Jingren Zhou</p>
+                                <p class="pub-venue">SDM 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/usenix25dptuning.pdf">Unlocking the Power of Differentially Private Zeroth-order Optimization for Fine-tuning LLMs</a></h3>
+                                <p class="pub-authors">Ergute Bao, Yangfan Jiang, Fei Wei, Xiaokui Xiao, Zitao Li, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">USENIX Security 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/tmlr25llmalgo.pdf">Designing Algorithms Empowered by Language Models: An Analytical Framework, Case Studies, and Insights</a></h3>
+                                <p class="pub-authors">Yanxi Chen, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">Transactions on Machine Learning Research 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/tpami25datallm.pdf">The Synergy between Data and Multi-Modal Large Language Models: A Survey from Co-Development Perspective</a></h3>
+                                <p class="pub-authors">Zhen Qin, Daoyuan Chen, Wenhao Zhang, Liuyi Yao, Yilun Huang, Bolin Ding, Yaliang Li, Shuiguang Deng</p>
+                                <p class="pub-venue">IEEE TPAMI 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/deb25llm4de.pdf">Large Language Models as Pretrained Data Engineers: Techniques and Opportunities</a></h3>
+                                <p class="pub-authors">Yin Lin, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">IEEE Data Engineering Bulletin 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/deb25llmrisks.pdf">Beyond Data Privacy: New Privacy Risks for Large Language Models</a></h3>
+                                <p class="pub-authors">Yuntao Du, Zitao Li, Ninghui Li, Bolin Ding</p>
+                                <p class="pub-venue">IEEE Data Engineering Bulletin 2025</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/manuscript24agentscope.pdf">AgentScope: A Flexible yet Robust Multi-Agent Platform</a></h3>
+                                <p class="pub-authors">Dawei Gao, Zitao Li, Weirui Kuang, Xuchen Pan, Daoyuan Chen, Zhijian Ma, Bingchen Qian, Liuyi Yao, Lin Zhu, Chen Cheng, Hongzhu Shi, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">arXiv 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/manuscript24manyagents.pdf">Very Large-Scale Multi-Agent Simulation in AgentScope</a></h3>
+                                <p class="pub-authors">Xuchen Pan, Dawei Gao, Yuexiang Xie, Yushuo Chen, Zhewei Wei, Yaliang Li, Bolin Ding, Ji-Rong Wen, Jingren Zhou</p>
+                                <p class="pub-venue">arXiv 2024</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+                    <!-- 2024 -->
+                    <div class="pub-year-group" id="pub-2024">
+                        <h3 class="pub-year-header">2024</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml24eellm.pdf">EE-LLM: Large-Scale Training and Inference of Early-Exit Large Language Models with 3D Parallelism</a></h3>
+                                <p class="pub-authors">Yanxi Chen, Xuchen Pan, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">ICML 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml24auctionformer.pdf">Auctionformer: A Unified Deep Learning Algorithm for Solving Equilibrium Strategies in Auction Games</a></h3>
+                                <p class="pub-authors">Kexin Huang, Ziqian Chen, Xue Wang, Chongming Gao, Jinyang Gao, Bolin Ding, Xiang Wang</p>
+                                <p class="pub-venue">ICML 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml24fstuning.pdf">Federated Full-Parameter Tuning of Billion-Sized Language Models with Communication Cost under 18 Kilobytes</a></h3>
+                                <p class="pub-authors">Zhen Qin, Daoyuan Chen, Bingchen Qian, Bolin Ding, Yaliang Li, Shuiguang Deng</p>
+                                <p class="pub-venue">ICML 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/mlsys24llmdm.pdf">UniDM: A Unified Framework for Data Manipulation with Large Language Models</a></h3>
+                                <p class="pub-authors">Yichen Qian, Yongyi He, Rong Zhu, Jintao Huang, Zhijian Ma, Haibin Wang, Yaohua Wang, Xiuyu Sun, Defu Lian, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">MLSys 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod24datajuicer.pdf">Data-Juicer: A One-Stop Data Processing System for Large Language Models</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Yilun Huang, Zhijian Ma, Hesen Chen, Xuchen Pan, Ce Ge, Dawei Gao, Yuexiang Xie, Zhaoyang Liu, Jinyang Gao, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">SIGMOD 2024 (Industrial Track)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod24estimator.pdf">Learning-based Property Estimation with Polynomials</a></h3>
+                                <p class="pub-authors">Jiajun Li, Runlin Lei, Sibo Wang, Zhewei Wei, Bolin Ding</p>
+                                <p class="pub-venue">SIGMOD 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/cidr24llmfeature.pdf">SMARTFEAT: Efficient Feature Construction through Feature-Level Foundation Model Interactions</a></h3>
+                                <p class="pub-authors">Yin Lin, Bolin Ding, H. V. Jagadish, Jingren Zhou</p>
+                                <p class="pub-venue">CIDR 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24pilotscope.pdf">PilotScope: Steering Databases with Machine Learning Drivers</a></h3>
+                                <p class="pub-authors">Rong Zhu, Lianggui Weng, Wenqing Wei, Di Wu, Jiazhen Peng, Yifan Wang, Bolin Ding, Defu Lian, Bolong Zheng, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24dailsql.pdf">Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation</a></h3>
+                                <p class="pub-authors">Dawei Gao, Haibin Wang, Yaliang Li, Xiuyu Sun, Yichen Qian, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24flauction.pdf">Performance-Based Pricing for Federated Learning via Auction</a></h3>
+                                <p class="pub-authors">Zitao Li, Bolin Ding, Liuyi Yao, Yaliang Li, Xiaokui Xiao, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24eraser.pdf">Eraser: Eliminating Performance Regression on Learned Query Optimizer</a></h3>
+                                <p class="pub-authors">Lianggui Weng, Rong Zhu, Di Wu, Bolin Ding, Bolong Zheng, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24alece.pdf">ALECE: An Attention-based Learned Cardinality Estimator for SPJ Queries on Dynamic Workloads</a></h3>
+                                <p class="pub-authors">Pengfei Li, Wenqing Wei, Rong Zhu, Bolin Ding, Jingren Zhou, Hua Lu</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb24adaptiveldp.pdf">AAA: an Adaptive Mechanism for Locally Differential Private Mean Estimation</a></h3>
+                                <p class="pub-authors">Fei Wei, Ergute Bao, Xiaokui Xiao, Yin Yang, Bolin Ding</p>
+                                <p class="pub-venue">VLDB 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr24lorafl.pdf">Improving LoRA in Privacy-preserving Federated Learning</a></h3>
+                                <p class="pub-authors">Youbang Sun, Zitao Li, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">ICLR 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr24forecasting.pdf">CARD: Channel Aligned Robust Blend Transformer for Time Series Forecasting</a></h3>
+                                <p class="pub-authors">Xue Wang, Tian Zhou, Qingsong Wen, Jinyang Gao, Bolin Ding, Rong Jin</p>
+                                <p class="pub-venue">ICLR 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd24fsllm.pdf">FederatedScope-LLM: A Comprehensive Package for Fine-tuning Large Language Models in Federated Learning</a></h3>
+                                <p class="pub-authors">Weirui Kuang, Bingchen Qian, Zitao Li, Daoyuan Chen, Dawei Gao, Xuchen Pan, Yuexiang Xie, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">KDD 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd24vertimrf.pdf">VertiMRF: Differentially Private Vertical Federated Data Synthesis</a></h3>
+                                <p class="pub-authors">Fangyuan Zhao, Zitao Li, Xuebin Ren, Bolin Ding, Shusen Yang, Yaliang Li</p>
+                                <p class="pub-venue">KDD 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd24fedbiot.pdf">FedBiOT: LLM Local Fine-tuning in Federated Learning without Full Model</a></h3>
+                                <p class="pub-authors">Feijie Wu, Zitao Li, Yaliang Li, Bolin Ding, Jing Gao</p>
+                                <p class="pub-venue">KDD 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www24gnn.pdf">Exploring Neural Scaling Law and Data Pruning Methods For Node Classification on Large-scale Graphs</a></h3>
+                                <p class="pub-authors">Zhen Wang, Yaliang Li, Bolin Ding, Yule Li, Zhewei Wei</p>
+                                <p class="pub-venue">WWW 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sp24ppds.pdf">SoK: Privacy-Preserving Data Synthesis</a></h3>
+                                <p class="pub-authors">Yuzheng Hu, Fan Wu, Qinbin Li, Yunhui Long, Gonzalo Munilla Garrido, Chang Ge, Bolin Ding, David Forsyth, Bo Li, Dawn Song</p>
+                                <p class="pub-venue">S&P 2024</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd24llmdata.pdf">Multi-modal Data Processing for Foundation Models: Practical Guidances and Use Cases</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">KDD 2024 (Tutorial)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod24learnedqo.pdf">Learned Query Optimizer: What is New and What is Next</a></h3>
+                                <p class="pub-authors">Rong Zhu, Lianggui Weng, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">SIGMOD 2024 (Tutorial)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/fnt24learnedqo-draft.pdf">Learned Query Optimizers</a></h3>
+                                <p class="pub-authors">Bolin Ding, Rong Zhu, Jingren Zhou</p>
+                                <p class="pub-venue">Foundations and Trends in Databases 2024</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-								2. Standard link (sends the user to another page/site)
+                    <!-- 2023 -->
+                    <div class="pub-year-group" id="pub-2023">
+                        <h3 class="pub-year-header">2023</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml23fedhpo.pdf">FedHPO-Bench: A Benchmark Suite for Federated Hyperparameter Optimization</a></h3>
+                                <p class="pub-authors">Zhen Wang, Weirui Kuang, Ce Zhang, Bolin Ding, Yaliang Li</p>
+                                <p class="pub-venue">ICML 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml23pfl.pdf">Efficient Personalized Federated Learning via Sparse Model-Adaptation</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Liuyi Yao, Dawei Gao, Bolin Ding, Yaliang Li</p>
+                                <p class="pub-venue">ICML 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd23pfl.pdf">Revisiting Personalized Federated Learning: Robustness Against Backdoor Attacks</a></h3>
+                                <p class="pub-authors">Zeyu Qin, Liuyi Yao, Daoyuan Chen, Yaliang Li, Bolin Ding, Minhao Cheng</p>
+                                <p class="pub-venue">KDD 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd23fsreal.pdf">FS-Real: Towards Real-World Cross-Device Federated Learning</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Dawei Gao, Yuexiang Xie, Xuchen Pan, Zitao Li, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">KDD 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb23fs.pdf">FederatedScope: A Flexible Federated Learning Platform for Heterogeneity</a></h3>
+                                <p class="pub-authors">Yuexiang Xie, Zhen Wang, Dawei Gao, Daoyuan Chen, Liuyi Yao, Weirui Kuang, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2023</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2204.05011" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb23fsreal.pdf">FS-Real: A Real-World Cross-Device Federated Learning Platform</a></h3>
+                                <p class="pub-authors">Dawei Gao, Daoyuan Chen, Zitao Li, Yuexiang Xie, Xuchen Pan, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2023 (Demo)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb23dili.pdf">DILI: A Distribution-Driven Learned Index</a></h3>
+                                <p class="pub-authors">Pengfei Li, Hua Lu, Rong Zhu, Bolin Ding, Long Yang, Gang Pan</p>
+                                <p class="pub-venue">VLDB 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb23base.pdf">BASE: Bridging the Gap between Cost and Latency for Query Optimization</a></h3>
+                                <p class="pub-authors">Xu Chen, Zhen Wang, Shuncheng Liu, Yaliang Li, Kai Zeng, Bolin Ding, Jingren Zhou, Han Su, Kai Zheng</p>
+                                <p class="pub-venue">VLDB 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb23lero.pdf">Lero: A Learning-to-Rank Query Optimizer</a></h3>
+                                <p class="pub-authors">Rong Zhu, Wei Chen, Bolin Ding, Xingguang Chen, Andreas Pfadler, Ziniu Wu, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www23fairness.pdf">Path-specific Causal Fair Prediction via Auxiliary Graph Structure Learning</a></h3>
+                                <p class="pub-authors">Liuyi Yao, Yaliang Li, Bolin Ding, Jingren Zhou, Jinduo Liu, Mengdi Huai, Jing Gao</p>
+                                <p class="pub-venue">WWW 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr23index.pdf">Learned Index with Dynamic Epsilon</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Wuchao Li, Yaliang Li, Bolin Ding, Kai Zeng, Defu Lian, Jingren Zhou</p>
+                                <p class="pub-venue">ICLR 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/soda23pandorabp.pdf">Competitive Information Design for Pandora's Box</a></h3>
+                                <p class="pub-authors">Bolin Ding, Yiding Feng, Chien-Ju Ho, Wei Tang, Haifeng Xu</p>
+                                <p class="pub-venue">SODA 2023</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/tois23privacyinrecsys.pdf">Studying the Impact of Data Disclosure Mechanism in Recommender Systems via Simulation</a></h3>
+                                <p class="pub-authors">Ziqian Chen, Fei Sun, Yifan Tang, Haokun Chen, Jinyang Gao, Bolin Ding</p>
+                                <p class="pub-venue">Transactions on Information Systems 2023</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+                    <!-- 2022 -->
+                    <div class="pub-year-group" id="pub-2022">
+                        <h3 class="pub-year-header">2022</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips22pfl.pdf">pFL-Bench: A Comprehensive Benchmark for Personalized Federated Learning</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Dawei Gao, Weirui Kuang, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">NeurIPS 2022 (Datasets and Benchmarks)</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2206.03655" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips22eventnet.pdf">EvenNet: Ignoring Odd-Hop Neighbors Improves Robustness of Graph Neural Networks</a></h3>
+                                <p class="pub-authors">Runlin Lei, Zhen Wang, Yaliang Li, Bolin Ding, Zhewei Wei</p>
+                                <p class="pub-venue">NeurIPS 2022</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2205.13892" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips22vfps.pdf">VF-PS: How to Select Important Participants in Vertical Federated Learning, Efficiently and Securely?</a></h3>
+                                <p class="pub-authors">Jiawei Jiang, Lukas Burkhalter, Fangcheng Fu, Bo Li, Bolin Ding, Bo Du, Anwar Hithnawi, Ce Zhang</p>
+                                <p class="pub-venue">NeurIPS 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/ccs22dpope.pdf">Strengthening Order Preserving Encryption with Differential Privacy</a></h3>
+                                <p class="pub-authors">Amrita Roy Chowdhury, Bolin Ding, Somesh Jha, Weiran Liu, Jingren Zhou</p>
+                                <p class="pub-venue">CCS 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22fsgnn.pdf">FederatedScope-GNN: Towards a Unified, Comprehensive and Efficient Package for Federated Graph Learning</a></h3>
+                                <p class="pub-authors">Zhen Wang, Weirui Kuang, Yuexiang Xie, Liuyi Yao, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                                <p class="pub-venue">KDD 2022 (Best Paper in ADS)</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2204.05562" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22nwgnn.pdf">Graph Neural Networks with Node-wise Architecture</a></h3>
+                                <p class="pub-authors">Zhen Wang, Zhewei Wei, Yaliang Li, Weirui Kuang, Bolin Ding</p>
+                                <p class="pub-venue">KDD 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22ndvestdist.pdf">Sampling-based Estimation of the Number of Distinct Values in Distributed Environment</a></h3>
+                                <p class="pub-authors">Jiajun Li, Zhewei Wei, Bolin Ding, Xiening Dai, Lu Lu, Jingren Zhou</p>
+                                <p class="pub-venue">KDD 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22universalseq.pdf">Towards Universal Sequence Representation Learning for Recommender Systems</a></h3>
+                                <p class="pub-authors">Yupeng Hou, Shanlei Mu, Wayne Xin Zhao, Yaliang Li, Bolin Ding, Ji-Rong Wen</p>
+                                <p class="pub-venue">KDD 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22maml.pdf">Finding Meta Winning Ticket to Train Your MAML</a></h3>
+                                <p class="pub-authors">Dawei Gao, Yuexiang Xie, Zimu Zhou, Zhen Wang, Yaliang Li, Bolin Ding</p>
+                                <p class="pub-venue">KDD 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod22mabapq.pdf">One Size Does Not Fit All: A Bandit-Based Sampler Combination Framework with Theoretical Guarantees</a></h3>
+                                <p class="pub-authors">Jinglin Peng, Bolin Ding, Jiannan Wang, Kai Zeng, Jingren Zhou</p>
+                                <p class="pub-venue">SIGMOD 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb22fedmf.pdf">Federated Matrix Factorization with Privacy Guarantee</a></h3>
+                                <p class="pub-authors">Zitao Li, Bolin Ding, Ce Zhang, Ninghui Li, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb22ndvest.pdf">Learning to be a Statistician: Learned Estimator for Number of Distinct Values</a></h3>
+                                <p class="pub-authors">Renzhi Wu, Bolin Ding, Xu Chu, Zhewei Wei, Xiening Dai, Tao Guan, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr22iflood.pdf">iFlood: A Stable and Effective Regularizer</a></h3>
+                                <p class="pub-authors">Yuexiang Xie, Zhen Wang, Yaliang Li, Ce Zhang, Jingren Zhou, Bolin Ding</p>
+                                <p class="pub-venue">ICLR 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www22unlearning.pdf">Recommendation Unlearning</a></h3>
+                                <p class="pub-authors">Chong Chen, Fei Sun, Min Zhang, Bolin Ding</p>
+                                <p class="pub-venue">WWW 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www22neuralrule.pdf">Explainable Neural Rule Learning</a></h3>
+                                <p class="pub-authors">Shaoyun Shi, Yuexiang Xie, Zhen Wang, Bolin Ding, Yaliang Li, Min Zhang</p>
+                                <p class="pub-venue">WWW 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www22komen.pdf">KoMen: Domain Knowledge Guided Interaction Recommendation for Emerging Scenarios</a></h3>
+                                <p class="pub-authors">Yiqing Xie, Zhen Wang, Carl Yang, Yaliang Li, Bolin Ding, Hongbo Deng, Jiawei Han</p>
+                                <p class="pub-venue">WWW 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigir22rec.pdf">Alleviating Spurious Correlations in Knowledge-aware Recommendations through Counterfactual Generator</a></h3>
+                                <p class="pub-authors">Shanlei Mu, Yaliang Li, Wayne Xin Zhao, Jingyuan Wang, Bolin Ding, Ji-Rong Wen</p>
+                                <p class="pub-venue">SIGIR 2022</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd22fs.pdf">A Practical Introduction to Federated Learning</a></h3>
+                                <p class="pub-authors">FederatedScope Team</p>
+                                <p class="pub-venue">KDD 2022 (Tutorial)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/edbt22aidb.pdf">Learned Query Optimizer: At the Forefront of AI-driven Databases</a></h3>
+                                <p class="pub-authors">Rong Zhu, Ziniu Wu, Chengliang Chai, Andreas Pfadler, Bolin Ding, Guoliang Li, Jingren Zhou</p>
+                                <p class="pub-venue">EDBT 2022 (Tutorial)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							-->
-							<ul>
-								<li>
-									<a href="#top" id="top-link" class="skel-layers-ignoreHref active"><span class="icon fa-home">About Me</span></a>
-								</li>
-								<li>
-									<a href="#bio" id="bio-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
-										<span class="label">Biography</span>
-									</a>
-								</li>
-								<li>
-									<a href="#research" id="research-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
-										<span class="label">Research</span>
-									</a>
-								</li>
-								<li>
-									<a href="#projects" id="projects-link" class="skel-layers-ignoreHref" style="font-size: 0.8em; text-align:left; padding: 0.0em 2em 0.0em 4em;">
-										<span class="label">Projects</span>
-									</a>
-								</li>
-								<li>
-									<a href="publications.html" id="publications-link"><span class="icon fa-folder-open">Publications</span></a>
-								</li>								
-								<li>
-									<a href="students.html" id="students-link"><span class="icon fa-users">For Students</span></a>
-								</li>
-								<li>
-									<a href="activities.html" id="activities-link"><span class="icon fa-th">Miscellaneous</span></a>
-								</li>
-							</ul>
-						</nav>
-				</div>
+                    <!-- 2021 -->
+                    <div class="pub-year-group" id="pub-2021">
+                        <h3 class="pub-year-header">2021</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd21debias.pdf">Debiasing Learning based Cross-domain Recommendation</a></h3>
+                                <p class="pub-authors">Siqing Li, Liuyi Yao, Shanlei Mu, Wayne Xin Zhao, Yaliang Li, Tonglei Guo, Bolin Ding, Ji-Rong Wen</p>
+                                <p class="pub-venue">KDD 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd21fives.pdf">FIVES: Feature Interaction Via Edge Search for Large-Scale Tabular Data</a></h3>
+                                <p class="pub-authors">Yuexiang Xie, Zhen Wang, Yaliang Li, Bolin Ding, Nezihe Merve Guerel, Ce Zhang, Minlie Huang, Wei Lin, Jingren Zhou</p>
+                                <p class="pub-venue">KDD 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb21flashp.pdf">FlashP: An Analytical Pipeline for Real-time Forecasting of Time-Series Relational Data</a></h3>
+                                <p class="pub-authors">Shuyuan Yan, Bolin Ding, Wei Guo, Jingren Zhou, Zhewei Wei, Xiaowei Jiang, Sheng Xu</p>
+                                <p class="pub-venue">VLDB 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb21vocanoml.pdf">VolcanoML: Speeding up End-to-End AutoML via Scalable Search Space Decomposition</a></h3>
+                                <p class="pub-authors">Yang Li, Yu Shen, Wentao Zhang, Jiawei Jiang, Yaliang Li, Bolin Ding, Jingren Zhou, Zhi Yang, Wentao Wu, Ce Zhang, Bin Cui</p>
+                                <p class="pub-venue">VLDB 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb20shufflerdp.pdf">Improving Utility and Security of the Shuffler-based Differential Privacy</a></h3>
+                                <p class="pub-authors">Tianhao Wang, Bolin Ding, Min Xu, Zhicong Huang, Cheng Hong, Jingren Zhou, Ninghui Li, Somesh Jha</p>
+                                <p class="pub-venue">VLDB 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb21cgm.pdf">CGM: An Enhanced Mechanism for Streaming Data Collection with Local Differential Privacy</a></h3>
+                                <p class="pub-authors">Ergute Bao, Yin Yang, Xiaokui Xiao, Bolin Ding</p>
+                                <p class="pub-venue">VLDB 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigir21recbot.pdf">Unified Conversational Recommendation Policy Learning via Graph-based Reinforcement Learning</a></h3>
+                                <p class="pub-authors">Yang Deng, Yaliang Li, Fei Sun, Bolin Ding, Wai Lam</p>
+                                <p class="pub-venue">SIGIR 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www21mwis.pdf">Efficient Reductions and A Fast Algorithm of Maximum Weighted Independent Set</a></h3>
+                                <p class="pub-authors">Mingyu Xiao, Sen Huang, Yi Zhou, Bolin Ding</p>
+                                <p class="pub-venue">WWW 2021</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd21automl.pdf">AutoML: A Perspective where Industry Meets Academy</a></h3>
+                                <p class="pub-authors">Yaliang Li, Zhen Wang, Yuexiang Xie, Bolin Ding, Ce Zhang</p>
+                                <p class="pub-venue">KDD 2021 (Tutorial)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb21blowfishdemo.pdf">Catch a Blowfish Alive: A Demonstration of Policy-Aware Differential Privacy for Interactive Data Exploration</a></h3>
+                                <p class="pub-authors">Jiaxiang Liu, Karl Knopf, Yiqing Tan, Bolin Ding, Xi He</p>
+                                <p class="pub-venue">VLDB 2021 (Demo)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/tkde19twosided.pdf">Two-Sided Online Micro-Task Assignment in Spatial Crowdsourcing</a></h3>
+                                <p class="pub-authors">Yongxin Tong, Yuxiang Zeng, Bolin Ding, Libin Wang, Lei Chen</p>
+                                <p class="pub-venue">TKDE 2021</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-				<div class="bottom">
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://dblp.uni-trier.de/pers/hd/d/Ding:Bolin" class="icon fa-book" target="_blank">&nbsp&nbspDBLP<span class="label">DBLP</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=AjYkTi8AAAAJ&hl=en" class="icon fa-google" target="_blank">&nbsp&nbspGoogle Scholar<span class="label">Google Scholar</span></a></li>
-							<li><a href="https://www.linkedin.com/in/bolin-ding-50a0119/" class="icon fa-linkedin" target="_blank">&nbsp&nbspLinkedIn<span class="label">LinkedIn</span></a></li>
-						</ul>						
-				</div>
+                    <!-- 2020 -->
+                    <div class="pub-year-group" id="pub-2020">
+                        <h3 class="pub-year-header">2020</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips20autohpo.pdf">Learning to Mutate with Hypergradient Guided Population</a></h3>
+                                <p class="pub-authors">Zhiqiang Tao, Yaliang Li, Bolin Ding, Ce Zhang, Jingren Zhou, Yun Fu</p>
+                                <p class="pub-venue">NeurIPS 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips20scalablegnn.pdf">Scalable Graph Neural Networks via Bidirectional Propagation</a></h3>
+                                <p class="pub-authors">Ming Chen, Zhewei Wei, Bolin Ding, Yaliang Li, Ye Yuan, Xiaoyong Du, Ji-Rong Wen</p>
+                                <p class="pub-venue">NeurIPS 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icml20deepgcn.pdf">Simple and Deep Graph Convolutional Networks</a></h3>
+                                <p class="pub-authors">Ming Chen, Zhewei Wei, Zengfeng Huang, Bolin Ding, Yaliang Li</p>
+                                <p class="pub-venue">ICML 2020</p>
+                            </div>
+                            <a href="https://arxiv.org/abs/2007.02133" class="pub-link" target="_blank">arXiv</a>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb20jointldp.pdf">Collecting and Analyzing Data Jointly from Multiple Services under Local Differential Privacy</a></h3>
+                                <p class="pub-authors">Min Xu, Bolin Ding, Tianhao Wang, Jingren Zhou</p>
+                                <p class="pub-venue">VLDB 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/ijcai20adabert.pdf">AdaBERT: Task-Adaptive BERT Compression with Differentiable Neural Architecture Search</a></h3>
+                                <p class="pub-authors">Daoyuan Chen, Yaliang Li, Minghui Qiu, Zhen Wang, Bofang Li, Bolin Ding, Hongbo Deng, Jun Huang, Wei Lin, Jingren Zhou</p>
+                                <p class="pub-venue">IJCAI 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigir20seqrec.pdf">Sequential Recommendation with Self-attentive Multi-adversarial Network</a></h3>
+                                <p class="pub-authors">Ruiyang Ren, Zhaoyang Liu, Yaliang Li, Wayne Xin Zhao, Hui Wang, Bolin Ding, Ji-Rong Wen</p>
+                                <p class="pub-venue">SIGIR 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/iclr20autometa.pdf">Automated Relational Meta-learning</a></h3>
+                                <p class="pub-authors">Huaxiu Yao, Xian Wu, Zhiqiang Tao, Yaliang Li, Bolin Ding, Ruirui Li, Zhenhui Li</p>
+                                <p class="pub-venue">ICLR 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/www20attackrec.pdf">Practical Data Poisoning Attack Against Next-Item Recommendation</a></h3>
+                                <p class="pub-authors">Hengtong Zhang, Yaliang Li, Bolin Ding, Jing Gao</p>
+                                <p class="pub-venue">WWW 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/ijcai20intent.pdf">Intent Preference Decoupling for User Representation on Online Recommender System</a></h3>
+                                <p class="pub-authors">Zhaoyang Liu, Haokun Chen, Fei Sun, Xu Xie, Jinyang Gao, Bolin Ding, Yanyan Shen</p>
+                                <p class="pub-venue">IJCAI 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/isit20blowfishldp.pdf">Linear and Range Counting under Metric-based Local Differential Privacy</a></h3>
+                                <p class="pub-authors">Zhuolun Xiang, Bolin Ding, Xi He, Jingren Zhou</p>
+                                <p class="pub-venue">ISIT 2020</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icdcs20dptruth.pdf">Towards Differentially Private Truth Discovery for Crowd Sensing Systems</a></h3>
+                                <p class="pub-authors">Yaliang Li, Houping Xiao, Zhan Qin, Chenglin Miao, Lu Su, Jing Gao, Kui Ren, Bolin Ding</p>
+                                <p class="pub-venue">ICDCS 2020</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-			</div>
+                    <!-- 2019 -->
+                    <div class="pub-year-group" id="pub-2019">
+                        <h3 class="pub-year-header">2019</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips19sgxdp.pdf">An Algorithmic Framework For Differentially Private Data Analysis on Trusted Processors</a></h3>
+                                <p class="pub-authors">Joshua Allen, Bolin Ding, Janardhan Kulkarni, Harsha Nori, Olga Ohrimenko, Sergey Yekhanin</p>
+                                <p class="pub-venue">NeurIPS 2019</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod19ldpmda.pdf">Answering Multi-Dimensional Analytical Queries under Local Differential Privacy</a></h3>
+                                <p class="pub-authors">Tianhao Wang, Bolin Ding, Jingren Zhou, Cheng Hong, Zhicong Huang, Ninghui Li, Somesh Jha</p>
+                                <p class="pub-venue">SIGMOD 2019</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sysml19ciml.pdf">Continuous Integration of Machine Learning Models: A Rigorous Yet Practical Treatment</a></h3>
+                                <p class="pub-authors">Cedric Renggli, Bojan Karlas, Bolin Ding, Feng Liu, Kevin Schawinski, Wentao Wu, Ce Zhang</p>
+                                <p class="pub-venue">SysML 2019</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/aaai19abc.pdf">Efficient Identification of Approximate Best Configuration of Training in Large Datasets</a></h3>
+                                <p class="pub-authors">Silu Huang, Chi Wang, Bolin Ding, Surajit Chaudhuri</p>
+                                <p class="pub-venue">AAAI 2019 (Oral)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb19DPSAaS.pdf">DPSAaS: Multi-Dimensional Data Sharing and Analytics as Services under Local Differential Privacy</a></h3>
+                                <p class="pub-authors">Min Xu, Tianhao Wang, Bolin Ding, Jingren Zhou, Cheng Hong, Zhicong Huang</p>
+                                <p class="pub-venue">VLDB 2019 (Demo)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-		<!-- Main -->
-			<div id="main">
+                    <!-- 2018 -->
+                    <div class="pub-year-group" id="pub-2018">
+                        <h3 class="pub-year-header">2018</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd18dptruth.pdf">An Efficient Two-Layer Mechanism for Privacy-Preserving Truth Discovery</a></h3>
+                                <p class="pub-authors">Yaliang Li, Chenglin Miao, Lu Su, Jing Gao, Qi Li, Bolin Ding, Zhan Qin, Kui Ren</p>
+                                <p class="pub-venue">KDD 2018</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb18hllforinc.pdf">Efficient Estimation of Inclusion Coefficient using HyperLogLog Sketches</a></h3>
+                                <p class="pub-authors">Azade Nazi, Bolin Ding, Vivek R. Narasayya, Surajit Chaudhuri</p>
+                                <p class="pub-venue">VLDB 2018</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod18hybridcb.pdf">Columnstore and B+ tree - Are Hybrid Physical Designs Important?</a></h3>
+                                <p class="pub-authors">Adam Dziedzic, Jingjing Wang, Sudipto Das, Bolin Ding, Vivek R. Narasayya, Manoj Syamala</p>
+                                <p class="pub-venue">SIGMOD 2018</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/aaai18dpab.pdf">Comparing Population Means under Local Differential Privacy: with Significance and Power</a></h3>
+                                <p class="pub-authors">Bolin Ding, Harsha Nori, Paul Li, Joshua Allen</p>
+                                <p class="pub-venue">AAAI 2018 (Oral)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/ppml18aon-full.pdf">A Distributed Algorithm For Differentially Private Heavy Hitters</a></h3>
+                                <p class="pub-authors">Bolin Ding, Janardhan Kulkarni, Sergey Yekhanin</p>
+                                <p class="pub-venue">NeurIPS Workshop 2018 (PPML)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/ppml18dpsgx.pdf">An Algorithmic Framework For Differentially Private Data Analysis on Trusted Processors</a></h3>
+                                <p class="pub-authors">Joshua Allen, Bolin Ding, Janardhan Kulkarni, Harsha Nori, Olga Ohrimenko, Sergey Yekhanin</p>
+                                <p class="pub-venue">NeurIPS Workshop 2018 (PPML)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						
-					</section>
+                    <!-- 2017 -->
+                    <div class="pub-year-group" id="pub-2017">
+                        <h3 class="pub-year-header">2017</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/nips17dptelemetry.pdf">Collecting Telemetry Data Privately</a></h3>
+                                <p class="pub-authors">Bolin Ding, Janardhan Kulkarni, Sergey Yekhanin</p>
+                                <p class="pub-venue">NIPS 2017</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb17task.pdf">Flexible Online Task Assignment in Real-Time Spatial Data</a></h3>
+                                <p class="pub-authors">Yongxin Tong, Libin Wang, Zimu Zhou, Bolin Ding, Lei Chen, Jieping Ye, Ke Xu</p>
+                                <p class="pub-venue">VLDB 2017</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod17aqpnosb.pdf">Approximate Query Processing: No Silver Bullet</a></h3>
+                                <p class="pub-authors">Surajit Chaudhuri, Bolin Ding, Srikanth Kandula</p>
+                                <p class="pub-venue">SIGMOD 2017 (Keynote)</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/chi17trustbutverify.pdf">Trust, but Verify: Optimistic Visualizations of Approximate Queries for Exploring Big Data</a></h3>
+                                <p class="pub-authors">Dominik Moritz, Danyel Fisher, Bolin Ding, Chi Wang</p>
+                                <p class="pub-venue">CHI 2017</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-				<!-- About Me -->
-					<section class="three">
-						<div id="bio" class="container">
-							<p>
-								I am a research scientist/senior director in Tongyi Lab at Alibaba Group. Prior to joining Alibaba, I was a researcher in <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>. I completed my Ph.D. in <a href="http://cs.illinois.edu/">Computer Science</a> at <a href="http://illinois.edu/">University of Illinois at Urbana-Champaign</a> under the supervision of Prof. <a href="http://www.cs.uiuc.edu/~hanj/">Jiawei Han</a>, my M.Phil. at <a href="http://www.se.cuhk.edu.hk/">The Chinese University of Hong Kong</a>, advised by <a href="http://www.se.cuhk.edu.hk/people/yu.html">Jeffery Xu Yu</a>, and my B.S. at <a href="http://info.ruc.edu.cn/">Renmin University of China</a>, advised by <a href="https://baike.baidu.com/item/%E7%8E%8B%E7%8F%8A/7315332">Shan Wang</a> and <a href="https://baike.baidu.com/item/%E6%9C%B1%E9%9D%92/8038842">Qing Zhu</a>.
-							</p>
+                    <!-- 2016 -->
+                    <div class="pub-year-group" id="pub-2016">
+                        <h3 class="pub-year-header">2016</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb16matching.pdf">Online Minimum Matching in Real-Time Spatial Data: Experiments and Analysis</a></h3>
+                                <p class="pub-authors">Yongxin Tong, Jieying She, Bolin Ding, Lei Chen, Tianyu Wo, Ke Xu</p>
+                                <p class="pub-venue">VLDB 2016</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde16task.pdf">Online mobile Micro-Task Allocation in Spatial Crowdsourcing</a></h3>
+                                <p class="pub-authors">Yongxin Tong, Jieying She, Bolin Ding, Libin Wang, Lei Chen</p>
+                                <p class="pub-venue">ICDE 2016</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod16sampleseek.pdf">Sample + Seek: Approximating Aggregates with Distribution Precision Guarantee</a></h3>
+                                <p class="pub-authors">Bolin Ding, Silu Huang, Surajit Chaudhuri, Kaushik Chakrabarti, Chi Wang</p>
+                                <p class="pub-venue">SIGMOD 2016</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod16quickr.pdf">Quickr: Lazily Approximating Complex AdHoc Queries in BigData Clusters</a></h3>
+                                <p class="pub-authors">Srikanth Kandula, Anil Shanbhag, Aleksandar Vitorovic, Matthaios Olma, Robert Grandl, Surajit Chaudhuri, Bolin Ding</p>
+                                <p class="pub-venue">SIGMOD 2016</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod16progress.pdf">Operator and Query Progress Estimation in Microsoft SQL Server Live Query Statistics</a></h3>
+                                <p class="pub-authors">Kukjin Lee, Arnd Christian König, Vivek R. Narasayya, Bolin Ding, Surajit Chaudhuri, Brent Ellwein, Alexey Eksarevskiy, Manbeen Kohli, Jacob Wyant, Praneeta Prakash, Rimma V. Nehme, Jiexing Li, Jeffrey F. Naughton</p>
+                                <p class="pub-venue">SIGMOD 2016</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icdcs16dpcrowd.pdf">Enabling Privacy-Preserving Incentives for Mobile Crowd Sensing Systems</a></h3>
+                                <p class="pub-authors">Haiming Jin, Lu Su, Bolin Ding, Klara Nahrstedt, Nikita Borisov</p>
+                                <p class="pub-venue">ICDCS 2016</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<p>
-								<news>We are hiring research scientists, engineers, and research interns for our lab! Please <a href="mailto:bolin.ding@alibaba-inc.com">drop me a line</a> if you are interested.</news>
-							</p>
-						</div>
+                    <!-- 2015 -->
+                    <div class="pub-year-group" id="pub-2015">
+                        <h3 class="pub-year-header">2015</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb15policydp.pdf">Design of Policy-Aware Differentially Private Algorithms</a></h3>
+                                <p class="pub-authors">Samuel Haney, Ashwin Machanavajjhala, Bolin Ding</p>
+                                <p class="pub-venue">VLDB 2015</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod15s4.pdf">S4: Top-k Spreadsheet-Style Search for Query Discovery</a></h3>
+                                <p class="pub-authors">Fotis Psallidas, Bolin Ding, Kaushik Chakrabarti, Surajit Chaudhuri</p>
+                                <p class="pub-venue">SIGMOD 2015</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-						<div id="research" class="container">
-							<h2>Research Interests</h2>
+                    <!-- 2014 -->
+                    <div class="pub-year-group" id="pub-2014">
+                        <h3 class="pub-year-header">2014</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb15kspatterns.pdf">Finding Patterns in a Knowledge Base using Keywords to Compose Table Answers</a></h3>
+                                <p class="pub-authors">Mohan Yang, Bolin Ding, Surajit Chaudhuri, Kaushik Chakrabarti</p>
+                                <p class="pub-venue">VLDB 2014</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd14failureloc.pdf">Scalable near Real-time Failure Localization of Data Center Networks</a></h3>
+                                <p class="pub-authors">Herodotos Herodotou, Bolin Ding, Shobana Balakrishnan, Geoff Outhred, Percy Fitter</p>
+                                <p class="pub-venue">KDD 2014</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod14discover.pdf">Discovering Queries based on Example Tuples</a></h3>
+                                <p class="pub-authors">Yanyan Shen, Kaushik Chakrabarti, Surajit Chaudhuri, Bolin Ding, Lev Novik</p>
+                                <p class="pub-venue">SIGMOD 2014</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod14blowfish.pdf">Blowfish Privacy: Tuning Privacy-Utility Trade-offs using Policies</a></h3>
+                                <p class="pub-authors">Xi He, Ashwin Machanavajjhala, Bolin Ding</p>
+                                <p class="pub-venue">SIGMOD 2014</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<p>
-								My recent research focuses on making systems, including physical computing systems such as <a href="./papers/vldb23lero.pdf">databases</a> and <a href="./papers/vldb23fs.pdf">machine learning systems</a>, and <a href="./papers/tois23privacyinrecsys.pdf">social systems</a>, intelligent and efficient with machine learning and optimization techniques. More specifically,
-								<ul>
-									<li>systems, programming framework, and algorithms for tuning large language models and building LLM applications;</li>
-									<li>empowering databases and data analytics with machine learning and large language models;</li>
-									<li>data privacy, pricing, and federated learning;</li>
-									<li>theory behind large language models and relationship between LLMs and traditional algorithms.</li>
-								</ul>
-							</p>
-						</div>
+                    <!-- 2013 -->
+                    <div class="pub-year-group" id="pub-2013">
+                        <h3 class="pub-year-header">2013</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb13detection.pdf">Attraction and Avoidance Detection from Movements</a></h3>
+                                <p class="pub-authors">Zhenhui Li, Bolin Ding, Fei Wu, Tobias Kin Hou Lei, Roland Kays, Margaret Crofoot</p>
+                                <p class="pub-venue">VLDB 2013</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd13cube.pdf">EventCube: Multi-Dimensional Search and Mining of Structured and Text Data</a></h3>
+                                <p class="pub-authors">Fangbo Tao, et al.</p>
+                                <p class="pub-venue">KDD 2013 (Demo)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-						<div id="projects" class="container">
-							<h2>Projects</h2>
+                    <!-- 2012 -->
+                    <div class="pub-year-group" id="pub-2012">
+                        <h3 class="pub-year-header">2012</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/dmkd11periodic.pdf">Mining Periodic Behaviors of Object Movements for Animal and Biological Sustainability Studies</a></h3>
+                                <p class="pub-authors">Zhenhui Li, Jiawei Han, Bolin Ding, Roland Kays</p>
+                                <p class="pub-venue">Data Mining and Knowledge Discovery 2012</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod12taxonomyindex.pdf">Optimizing Index for Taxonomy Keyword Search</a></h3>
+                                <p class="pub-authors">Bolin Ding, Haixun Wang, Ruoming Jin, Jiawei Han, Zhongyuan Wang</p>
+                                <p class="pub-venue">SIGMOD 2012</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde12uncertainclosed.pdf">Discovering Threshold-based Frequent Closed Itemsets over Probabilistic Data</a></h3>
+                                <p class="pub-authors">Yongxin Tong, Lei Chen, Bolin Ding</p>
+                                <p class="pub-venue">ICDE 2012</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<p>
-							    Together with the team, I am actively working on the following projects:
-							</p>
-							<ul>
-								<li><a href="#projects-datajuicer">Data-Juicer: a big data processing system for LLMs </a></li>
-								<li><a href="#projects-agentscope">AgentScope: agent-oriented programming for building LLM applications</a></li>
-								<li><a href="#projects-llm4data">LLM4Analytics: automated data analytics with LLMs</a></li>
-								<li><a href="#projects-pilotscope">PilotScope: an AI4DB project</a></li>
-								<li><a href="#projects-fs">FederatedScope: systems and algorithms for data privacy and federated learning</a></li>
-								<li><a href="#projects-ai4ss">AI4SocialScience: interdisciplinary research between social science and machine learning</a></li>
-							</ul>
+                    <!-- 2011 -->
+                    <div class="pub-year-group" id="pub-2011">
+                        <h3 class="pub-year-header">2011</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb11intersection.pdf">Fast Set Intersection in Memory</a></h3>
+                                <p class="pub-authors">Bolin Ding, Arnd Christian König</p>
+                                <p class="pub-venue">VLDB 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb11reachability.pdf">Distance-Constraint Reachability Computation in Uncertain Graphs</a></h3>
+                                <p class="pub-authors">Ruoming Jin, Lin Liu, Bolin Ding, Haixun Wang</p>
+                                <p class="pub-venue">VLDB 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb11progressest.pdf">A Statistical Approach Towards Robust Progress Estimation</a></h3>
+                                <p class="pub-authors">Arnd Christian König, Bolin Ding, Surajit Chaudhuri, Vivek R. Narasayya</p>
+                                <p class="pub-venue">VLDB 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sigmod11privatecube.pdf">Differentially Private Data Cubes: Optimizing Noise Sources and Consistency</a></h3>
+                                <p class="pub-authors">Bolin Ding, Marianne Winslett, Jiawei Han, Zhenhui Li</p>
+                                <p class="pub-venue">SIGMOD 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde11recurrent.pdf">Bidirectional Mining of Non-redundant Recurrent Rules from a Sequence Database</a></h3>
+                                <p class="pub-authors">David Lo, Bolin Ding, Lucia, Jiawei Han</p>
+                                <p class="pub-venue">ICDE 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/tkde11topcells.pdf">Efficient Keyword-Based Search for Top-K Cells in Text Cube</a></h3>
+                                <p class="pub-authors">Bolin Ding, Bo Zhao, Cindy Xide Lin, Jiawei Han, Chengxiang Zhai, Ashok N. Srivastava, Nikunj C. Oza</p>
+                                <p class="pub-venue">TKDE 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/cikm11texplorer.pdf">TEXplorer: Keyword-based Object Search and Exploration in Multidimensional Text Databases</a></h3>
+                                <p class="pub-authors">Bo Zhao, Cindy Xide Lin, Bolin Ding, Jiawei Han</p>
+                                <p class="pub-venue">CIKM 2011</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/sensys11aggregate.pdf">Hierarchical Aggregate Classification with Limited Supervision for Data Reduction in Wireless Sensor Networks</a></h3>
+                                <p class="pub-authors">Lu Su, Jing Gao, Yong Yang, Tarek F. Abdelzaher, Bolin Ding, Jiawei Han</p>
+                                <p class="pub-venue">SenSys 2011</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
+                    <!-- 2010 -->
+                    <div class="pub-year-group" id="pub-2010">
+                        <h3 class="pub-year-header">2010</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb10swarm.pdf">Swarm: Mining Relaxed Temporal Moving Object Clusters</a></h3>
+                                <p class="pub-authors">Zhenhui Li, Bolin Ding, Jiawei Han, Roland Kays</p>
+                                <p class="pub-venue">VLDB 2010</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/kdd10period.pdf">Mining Periodic Behaviors for Moving Objects</a></h3>
+                                <p class="pub-authors">Zhenhui Li, Bolin Ding, Jiawei Han, Roland Kays, Peter Nye</p>
+                                <p class="pub-venue">KDD 2010</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde10topcells.pdf">TopCells: Keyword-based Search of Top-k Aggregated Documents in Text Cube</a></h3>
+                                <p class="pub-authors">Bolin Ding, Bo Zhao, Cindy Xide Lin, Jiawei Han, Chengxiang Zhai</p>
+                                <p class="pub-venue">ICDE 2010</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<div id="projects-datajuicer" class="container">
-							<hr>
-							<h3>Data-Juicer (<a href="https://github.com/modelscope/data-juicer">open-source project</a>)</h3>
-							<p>
-								<description>
-									Pipelines of training and tuning large language models start from the data pre-processors,
-									which continuously optimize the mixture of training data after receiving feedbacks from model evaluators.
-									<!--									At an earlier time, we developed a series of automated machine learning techniques (<a href = "./papers/kdd21automl.pdf">AutoML</a>) in order to enable developers and data scientists with limited machine learning expertise and resources to train high-quality models, including <a href="./papers/nips20autohpo.pdf">auto tuning of hyperparameters</a>, <a href="./papers/kdd21fives.pdf">auto feature selection</a>, and <a href="./papers/ijcai20adabert.pdf">neural architecture search</a> for machine learning models. Some of these techniques have been deployed into Alibaba’s cloud AutoML products.-->
-									Data-Juicer is a one-stop multimodal data processing system to make data higher-quality, juicier, and more digestible for training and tuning large language models.
-									Data-Juicer features a fine-grained abstraction of the pipeline for constructing data recipes, with over 50 built-in operators that
-									can be freely composed and extended. By incorporating visualization and auto-evaluation capabilities, it enables a timely
-									feedback loop after data processing for both LLM pre-training and fine-tuning to continuously improve data recipes.
-									Data-Juicer can be integrated with various ecosystems for LLM training and evaluation, and is optimized for distributed computing.
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									the Data-Juicer system [<a href="./papers/sigmod24datajuicer.pdf">SIGMOD 2024</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+                    <!-- 2009 -->
+                    <div class="pub-year-group" id="pub-2009">
+                        <h3 class="pub-year-header">2009</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3>Query translation from XPath to SQL in the presence of recursive DTDs</h3>
+                                <p class="pub-authors">Wenfei Fan, Jeffrey Xu Yu, Jianzhong Li, Bolin Ding, Lu Qin</p>
+                                <p class="pub-venue">VLDB Journal 2009</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde09repetitive.pdf">Efficient Mining of Closed Repetitive Gapped Subsequences from a Sequence Database</a></h3>
+                                <p class="pub-authors">Bolin Ding, David Lo, Jiawei Han, Siau-Cheng Khoo</p>
+                                <p class="pub-venue">ICDE 2009</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icnp09ocast.pdf">oCast: Optimal Multicast Routing Protocol for Wireless Sensor Networks</a></h3>
+                                <p class="pub-authors">Lu Su, Bolin Ding, Yong Yang, Tarek F. Abdelzaher, Guohong Cao, Jennifer C. Hou</p>
+                                <p class="pub-venue">ICNP 2009</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<div id="projects-agentscope" class="container">
-							<hr>
-							<h3>AgentScope (<a href="https://github.com/modelscope/agentscope">open-source project</a>)</h3>
-							<p>
-								<description>
-									We are developing a programming framework called AgentScope which abstracts each LLM instance with auxiliary components and functionalities
-									such as memory and RAG as an LLM agent. AgentScope allows developers to easily assemble multiple LLM agents into a traditional or AI-driven application.
-									From the view of programming languages, AgentScope aims to offer <a>agent-oriented programming (AOP)</a> as a new programming model to organize the design
-									and implementation of next-generation LLM-empowered applications. AgentScope also offers necessary native services for agents,
-									including communication between agents (locally or remotely), web search, and code execution.
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									the technical report about AgentScope [<a href="https://arxiv.org/abs/2402.14034">manuscript</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+                    <!-- 2008 -->
+                    <div class="pub-year-group" id="pub-2008">
+                        <h3 class="pub-year-header">2008</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/edbt08tdsp.pdf">Finding Time-Dependent Shortest Paths over Large Graphs</a></h3>
+                                <p class="pub-authors">Bolin Ding, Jeffrey Xu Yu, Lu Qin</p>
+                                <p class="pub-venue">EDBT 2008</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde08gsearch.pdf">Fast Graph Pattern Matching</a></h3>
+                                <p class="pub-authors">Jiefeng Cheng, Jeffrey Xu Yu, Bolin Ding, Philip S. Yu, Haixun Wang</p>
+                                <p class="pub-venue">ICDE 2008</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icdm08textcube.pdf">Text Cube: Computing IR Measures for Multidimensional Text Database Analysis</a></h3>
+                                <p class="pub-authors">Cindy Xide Lin, Bolin Ding, Jiawei Han, Feida Zhu, Bo Zhao</p>
+                                <p class="pub-venue">ICDM 2008</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icdm08stream.pdf">Stream Sequential Pattern Mining with Precise Error Bounds</a></h3>
+                                <p class="pub-authors">Luiz F. Mendes, Bolin Ding, Jiawei Han</p>
+                                <p class="pub-venue">ICDM 2008</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<div id="projects-llm4data" class="container">
-							<hr>
-							<h3>LLM4Analytics</h3>
-							<p>
-								<description>
-									Large language models make various difficult tasks (e.g., writing code) more accessible than they used to be.
-									This project focuses on developing tools and systems for data analytical tasks with the help of large language models, which, for example, help
-									i) translate natural language into executable actions, ii) find the right pieces of code for these actions, iii) augment data with knowledge in LLMs,
-									and iv) assemble the data analytics pipeline. Following are some preliminary works and more are forthcoming.
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									Text2SQL [<a href="./papers/vldb24dailsql.pdf">VLDB 2024</a>],<br>
-									UniDM: LLM for data manipulation [<a href="./papers/mlsys24llmdm.pdf">MLSys 2024</a>],<br>
-									SMARTFEAT: LLM for feature augmentation [<a href="./papers/cidr24llmfeature.pdf">CIDR 2024</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+                    <!-- 2007 -->
+                    <div class="pub-year-group" id="pub-2007">
+                        <h3 class="pub-year-header">2007</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/dasfaa07twiglist.pdf">TwigList: Make Twig Pattern Matching Fast</a></h3>
+                                <p class="pub-authors">Lu Qin, Jeffrey Xu Yu, Bolin Ding</p>
+                                <p class="pub-venue">DASFAA 2007</p>
+                            </div>
+                        </article>
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/icde07steiner.pdf">Finding Top-k Min-Cost Connected Trees in Databases</a></h3>
+                                <p class="pub-authors">Bolin Ding, Jeffrey Xu Yu, Shan Wang, Lu Qin, Xiao Zhang, Xuemin Lin</p>
+                                <p class="pub-venue">ICDE 2007 (Best Student Paper)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
 
-							<div id="projects-pilotscope" class="container">
-							<hr>
-							<h3>PilotScope (<a href="https://github.com/alibaba/pilotscope">open-source project</a>)</h3>
-							<p>
-								<description>
-									Is it possible for models to learn to be <a href="./papers/vldb22ndvest.pdf">a statistician</a>, <a>a database administrator</a>, <a href="./papers/iclr23index.pdf">an index</a>, <a href="./papers/sigmod22mabapq.pdf">a query processor</a>, or <a href="./papers/vldb23lero.pdf">a query optimizer</a>?
-							    	We develop a series of "<a href = "./papers/edbt22aidb.pdf">learning-to-be</a>" techniques for different database components,
-									as well as a middleware system, called PilotScope, to deploy these learned components into databases.
-									PilotScope offers a programming framework to bridge the gaps between AI4DB (Artificial Intelligence for Databases) algorithms and database systems,
-									with which researchers can develop and train their own learned components, deploy them without modifying the code in database engines,
-									and compare them fairly with alternatives in actual database systems.
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									the PilotScope system [<a href="./papers/vldb24pilotscope.pdf">VLDB 2024</a>],<br>
-									learned cardinality estimator [<a href="./papers/vldb22ndvest.pdf">VLDB 2022</a>, <a href="./papers/vldb24alece.pdf">VLDB 2024</a>, <a href="./papers/sigmod24estimator.pdf">SIGMOD 2024</a>],<br>
-									Lero: learned query optimizer [<a href="./papers/vldb23lero.pdf">VLDB 2023</a>],<br>
-									Eraser: eliminating performance regression in AI4DB [<a href="./papers/vldb24eraser.pdf">VLDB 2024</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+                    <!-- 2006 -->
+                    <div class="pub-year-group" id="pub-2006">
+                        <h3 class="pub-year-header">2006</h3>
+                        <div class="pub-year-papers">
+                        <article class="pub-item">
+                            <div class="pub-info">
+                                <h3><a href="papers/vldb06nuits.pdf">NUITS: A Novel User Interface for Efficient Keyword Search over Databases</a></h3>
+                                <p class="pub-authors">Shan Wang, Zhaohui Peng, Jun Zhang, Lu Qin, Sheng Wang, Jeffrey Xu Yu, Bolin Ding</p>
+                                <p class="pub-venue">VLDB 2006 (Demo)</p>
+                            </div>
+                        </article>
+                        </div>
+                                        </div>
+            </div>
+        </div>
+    </section>
 
-							<div id="projects-fs" class="container">
-							<hr>
-							<h3>FederatedScope (<a href="https://github.com/alibaba/FederatedScope">open-source project</a>)</h3>
-							<p>
-								<description>
-									We have open-sourced an easy-to-use federated learning package, FederatedScope
-									(<a href = "https://www.computerweekly.com/blog/Open-Source-Insider/Alibaba-open-sources-privacy-preserving-computation">media coverage 1</a>, <a href = "https://www.qbitai.com/2022/05/34420.html">media coverage 2</a>, ...).
-									It provides comprehensive functionalities including <a>privacy protection</a>, <a href="./papers/icml23pfl.pdf">personalization</a>, <a href="./papers/icml23fedhpo.pdf">auto-tuning</a> of federated machine learning models,
-									based on a <a href="./papers/vldb23fs.pdf">programming framework</a> with which one can conveniently develop and deploy her/his own federated models in various settings about how data and models are distributed,
-									e.g., <a href="./papers/vldb22fedmf.pdf">vertically/horizontally collaborative learning</a>, and <a>cross-silo</a>/<a href="./papers/vldb23fsreal.pdf">cross-device</a> federated learning services.
-									We have enriched its functionality for some specific scenarios, e.g., <a href = "./papers/kdd22fsgnn.pdf">FederatedScope-GNN</a> for federated learning of graph neural networks,
-									<a href="./papers/kdd23fsreal.pdf">FederatedScope-Real</a> for federated learning across many devices,
-									and <a href="https://arxiv.org/pdf/2309.00363.pdf">FederatedScope-LLM</a> for tuning large language models in federated learning settings.
-									We also consider fundamental questions about how to price data/models in federated learning (e.g., via <a href="./papers/vldb24flauction.pdf">truthful bidding</a>).
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									the FederatedScope system [<a href="./papers/vldb23fs.pdf">VLDB 2023</a>],<br>
-									FederatedScope for GNN [<a href="./papers/kdd22fsgnn.pdf">KDD 2022</a>],<br>
-									FederatedScope for devices [<a href="./papers/vldb23fsreal.pdf">VLDB 2023</a>, <a href="./papers/kdd23fsreal.pdf">KDD 2023</a>],<br>
-									data pricing in federated learning [<a href="./papers/vldb24flauction.pdf">VLDB 2024</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+    <section id="students">
+        <div class="container">
+            <div class="info-two-col reveal">
+                <span class="section-number">For Students</span>
+                <div>
+                    <p class="intern-intro">If you are interested in my research and projects, and would like to join our lab as Research Scientists/Engineers or Research Interns, please <a href="mailto:bolin.ding@alibaba-inc.com">drop me a line</a>.<br>I have worked with some amazing interns in Microsoft Research (2013-2017) and Alibaba (2018-now):</p>
+                    <div class="intern-grid">
+                        <div class="intern-row"><span class="intern-year">2025</span><span class="intern-names">Haoming Meng</span></div>
+                        <div class="intern-row"><span class="intern-year">2024</span><span class="intern-names">Yuntao Du, Pengfei He</span></div>
+                        <div class="intern-row"><span class="intern-year">2023</span><span class="intern-names">Derek Hu, Yin Lin, Mike Wang, Fan Wu</span></div>
+                        <div class="intern-row"><span class="intern-year">2022</span><span class="intern-names">Song Bian, Yang Guo, Yuzheng Hu</span></div>
+                        <div class="intern-row"><span class="intern-year">2021</span><span class="intern-names">Renzhi Wu</span></div>
+                        <div class="intern-row"><span class="intern-year">2020</span><span class="intern-names">Zitao Li, Wei Tang, Renzhi Wu</span></div>
+                        <div class="intern-row"><span class="intern-year">2019</span><span class="intern-names">Amrita Roy Chowdhury, Yuchao Tao, Zhuolun Xiang, Min Xu, Huaxiu Yao</span></div>
+                        <div class="intern-row"><span class="intern-year">2018</span><span class="intern-names">Yihan Gao, Jinglin Peng, Tianhao Wang</span></div>
+                        <div class="intern-row"><span class="intern-year">2017</span><span class="intern-names">Silu Huang, Zhuoyue Zhao</span></div>
+                        <div class="intern-row"><span class="intern-year">2016</span><span class="intern-names">Kolya Malkin, Dominik Moritz, Zhao Chang</span></div>
+                        <div class="intern-row"><span class="intern-year">2015</span><span class="intern-names">Silu Huang, Vasileios Verroios</span></div>
+                        <div class="intern-row"><span class="intern-year">2014</span><span class="intern-names">Fotis Psallidas, Saravanan Thirumuruganathan</span></div>
+                        <div class="intern-row"><span class="intern-year">2013</span><span class="intern-names">Fabian Hueske, Yanyan Shen, Mohan Yang</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-							<div id="projects-ai4ss" class="container">
-							<hr>
-							<h3>AI4SocialScience</h3>
-							<p>
-								<description>
-									We conduct interdisciplinary research between Social Science (starting from, e.g., Economics) and Machine Learning.
-									Besides traditional theoretical study, we conduct simulation study by building multi-agent platforms based on reinforcement learning and large language models,
-									in order to investigate scenarios that are too complicated to be formulated as clean and solvable theoretical/math problems.
-									For <a href = "./papers/tois23privacyinrecsys.pdf">example</a>, in recommendation systems,
-									we study how users would react to different data privacy policies, and how the utility of eCommerce platforms and the utility of individual users are affected accordingly.
-								</description>
-							</p>
-							<p>
-								<b style="color:darkcyan">Representative publications</b><br>
-								<description>
-									privacy v.s. utility on eCommerce platforms [<a href="./papers/tois23privacyinrecsys.pdf">TOIS 2023</a>],<br>
-									competitive information design [<a href="./papers/soda23pandorabp.pdf">SODA 2023</a>],
-									<a href="publications.html">...</a><br>
-									<a href="#projects">back to top</a>
-								</description>
-							</p>
-							</div>
+    <section id="awards-service">
+        <div class="container">
 
-<!--							<p>-->
-<!--							    <b>DPaaS (Data Privacy as a Service):</b>-->
-<!--							    Developing a series of privacy-preserving data collection, sharing, analysis, and learning techniques, for example, <a href = "./papers/vldb20jointldp.pdf">multi-dimensional</a> and <a href = "./papers/vldb20shufflerdp.pdf">multi-source</a> data sharing and OLAP under local differential privacy and/or MPC, and <a href = "./papers/vldb22fedmf.pdf">federated learning</a> with formal privacy guarantees for vertically collaborative learning and device-server collaborative learning.-->
-<!--							    Building <a href = "./papers/vldb19DPSAaS.pdf">a system </a> with which these techniques can be deployed on various data platforms.-->
-<!--							</p>-->
+            <!-- Awards -->
+            <div class="info-two-col reveal" style="margin-bottom: 5rem;">
+                <span class="section-number">Awards</span>
+                <ul class="award-list">
+                    <li>Best Paper Award, KDD 2022 (ADS track)</li>
+                    <li>Technical Excellence Award, Microsoft Privacy, FY17</li>
+                    <li>Yahoo!-DAIS Research Excellence Award Gold, 2012</li>
+                    <li>Best Student Paper, ICDE 2007</li>
+                    <li>Richard T. Cheng Fellowship, UIUC, 2007–2008</li>
+                    <li>TopCoder Programming Competition, 1st Place, 2007</li>
+                    <li>ACM-ICPC World Finals, Honorable Mention, 2005</li>
+                    <li>ACM-ICPC Asia Regional, Gold Medal (3rd place), 2004</li>
+                </ul>
+            </div>
 
-                            <!--<p><b>Privacy-Preserving Data Analytics:</b> how to process analytical queries and analytics tasks with precision guarantees while protecting data owners’ privacy with formal notations, e.g., differential privacy. My Ph.D. thesis is about building differentially private data cubes as private “APIs” to support OLAP queries. We revise the notion of differential privacy to tune privacy-utility trade-offs. More recently, under the local model of differential privacy, we invent data collection mechanisms for different data types, and pair them with estimation algorithms to support approximate data analytics (e.g., heavy hitters and A/B testing).</p>-->
+            <!-- Service -->
+            <div class="info-two-col reveal">
+                <span class="section-number">Service</span>
+                <div class="service-content">
+                    <div class="service-group">
+                        <h4>Program Committee</h4>
+                        <ul class="service-list">
+                            <li><strong>SIGMOD</strong> 2020–2022</li>
+                            <li><strong>PVLDB</strong> 2017–2026</li>
+                            <li><strong>ICDE</strong> 2019–2023</li>
+                            <li><strong>KDD</strong> 2017–2026 <em>(Area Chair 2023–2026)</em></li>
+                            <li><strong>ICML</strong> 2021–2026 <em>(Area Chair 2023–2026)</em></li>
+                            <li><strong>ICLR</strong> 2021–2026 <em>(Area Chair 2024–2026)</em></li>
+                            <li><strong>NeurIPS</strong> 2020–2025 <em>(Area Chair 2021–2025)</em></li>
+                            <li><strong>CCS</strong> 2022–2024</li>
+                            <li><strong>CIKM</strong> 2024 <em>(Senior PC)</em></li>
+                            <li><strong>WINE</strong> 2022 <em>(Senior PC)</em></li>
+                            <li><strong>NSF Panelist</strong> 2016</li>
+                        </ul>
+                    </div>
+                    <div class="service-group">
+                        <h4>Journal Reviewing</h4>
+                        <ul class="service-list">
+                            <li>ACM Transactions on Database Systems (TODS)</li>
+                            <li>IEEE Transactions on Knowledge and Data Engineering (TKDE)</li>
+                            <li>ACM Transactions on Knowledge Discovery from Data (TKDD)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-							<!--<p><b>Approximate Query Processing:</b> how to process analytical queries on large-scale data (e.g., with over billions of rows) with approximate answers in interactive response time (e.g., one hundred milliseconds). New operators, rewritten query plans, precomputed samples, indexes, etc., are essential to such approximate query processing engines. There are both theory and system challenges (e.g., how to handle frequent data updates and needs form different application pipelines).</p>-->
-							
-							<!--<p><b>Querying and Searching Large-Scale Data:</b> search models, algorithms, and indexes to help people explore large-scale structured or semi-structured data, e.g., text and knowledge graphs; query optimization and query processing, e.g., a fast operator for set intersection and an estimator for query-processing progress.</p>-->
-							
-							<!--<p><b>Data Mining:</b> developing data mining algorithms for various applications, e.g., failure localization and pattern mining.</p>-->
-						</div>
-					</section>
-			</div>
+        </div>
+    </section>
 
-		<!-- Footer -->
-			<div id="footer">
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bolin Ding. All rights reserved.</p>
+            <p>Last updated: February 2026</p>
+        </div>
+    </footer>
 
-				<!-- Copyright <li>&copy; Untitled. All rights reserved.</li> -->
-					<ul class="copyright">						
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				
-				<!--<script src="//t1.extreme-dm.com/f.js" id="eXF-atlas198-0" async defer></script>-->
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script src="assets/script.js"></script>
+</body>
 </html>
