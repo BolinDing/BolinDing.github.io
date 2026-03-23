@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes — Bolin Ding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/notes.css">
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="index.html" class="nav-logo">BD.</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#students">For Students</a></li>
+                <li><a href="index.html#awards-service">Awards & Service</a></li>
+                <li><a href="notes.html" style="color: var(--text-primary);">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="notes-header">
+        <div class="container">
+            <div class="notes-header-left">
+                <span class="notes-header-label">Bolin Ding</span>
+                <h1 class="notes-header-title">Technical<br><em>Notes</em></h1>
+                <p class="notes-header-desc">Occasional writings on research, systems, and ideas in LLMs, agents, machine learning, data management, and beyond.</p>
+            </div>
+            <div class="notes-header-right">                
+                <nav class="notes-toc">
+                    <span class="notes-toc-label">Posts</span>
+                    <ol class="notes-toc-list" id="notes-toc-list"></ol>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="notes-main">
+        <div class="container">
+
+            <!-- ── Post 01: Reading List ── -->
+            <article class="notes-post" id="post-papers-i-love">
+                <div class="post-sidebar">
+                    <h2 class="post-title">Papers I Love (and I Wrote)</h2>
+                    <p class="post-date">April, 2024 (Updated)</p>
+                    <span class="post-tag">Reading List</span>
+                    <p class="post-desc">A personal selection of my papers — chosen for their technical elegance, the problems they dared to tackle, and/or personal taste. The list will be updated from time to time.</p>
+                </div>
+
+                <div class="reading-list">
+
+                    <div class="reading-item">
+                        <span class="reading-num">1</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data pricing</span>
+                                <span class="reading-label">federated learning</span>
+                                <span class="reading-label">mechanism design</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb24flauction.pdf" target="_blank">Performance-Based Pricing for Federated Learning via Auction</a></h3>
+                            <p class="reading-authors">Zitao Li, Liuyi Yao, Yaliang Li, Xiaokui Xiao, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">VLDB 2024</span>
+                            <p class="reading-desc">A truthful bidding mechanism for data exchanging and sharing in federated learning. In FL, data owners contribute local model updates of varying quality, yet they need economic incentives to participate honestly. This paper designs an auction where data buyers and sellers bid truthfully — no party gains by misreporting — and payment is tied to the actual performance gain each contributor delivers.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">2</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">query optimization</span>
+                                <span class="reading-label">AI4DB</span>
+                                <span class="reading-label">learning to rank</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb23lero.pdf" target="_blank">Lero: A Learning-to-Rank Query Optimizer</a></h3>
+                            <p class="reading-authors">Rong Zhu, Wei Chen, Xingguang Chen, Andreas Pfadler, Ziniu Wu, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">VLDB 2023</span>
+                            <p class="reading-desc">A learning-to-rank query optimizer that treats plan selection as a pairwise ranking problem rather than absolute cost estimation. Traditional optimizers suffer from inaccurate cardinality estimates; Lero sidesteps this by learning which plan is better than another from execution feedback, achieving robust performance across diverse workloads without expensive re-calibration.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">3</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">recommender systems</span>
+                                <span class="reading-label">simulation</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/tois23privacyinrecsys.pdf" target="_blank">Studying the Impact of Data Disclosure Mechanism in Recommender Systems via Simulation</a></h3>
+                            <p class="reading-authors">Ziqian Chen, Fei Sun, Yifan Tang, Haokun Chen, Jinyang Gao, Bolin Ding</p>
+                            <span class="reading-venue">TOIS 2023</span>
+                            <p class="reading-desc">A multi-agent simulation study of how data disclosure policies reshape social welfare in recommender systems. Using reinforcement learning agents to model users' strategic privacy choices, the paper reveals that the platform's disclosure mechanism — what data it shares and with whom — has outsized effects on both recommendation quality and user privacy, effects that are hard to measure without simulation.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">4</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">federated learning</span>
+                                <span class="reading-label">systems</span>
+                                <span class="reading-label">platform</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb23fs.pdf" target="_blank">FederatedScope: A Flexible Federated Learning Platform for Heterogeneity</a></h3>
+                            <p class="reading-authors">Yuexiang Xie, Zhen Wang, Dawei Gao, Daoyuan Chen, Liuyi Yao, Weirui Kuang, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">VLDB 2023</span>
+                            <p class="reading-desc">A flexible federated learning platform built around a message-passing abstraction that naturally handles statistical, model, and system heterogeneity. FederatedScope lets practitioners compose FL algorithms from reusable event-driven components, making it straightforward to benchmark, extend, and deploy FL in settings where data distributions, model architectures, and device capabilities all differ.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">5</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">federated learning</span>
+                                <span class="reading-label">graph learning</span>
+                                <span class="reading-label">systems</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/kdd22fsgnn.pdf" target="_blank">FederatedScope-GNN: Towards a Unified, Comprehensive and Efficient Package for Federated Graph Learning</a></h3>
+                            <p class="reading-authors">Zhen Wang, Weirui Kuang, Yuexiang Xie, Liuyi Yao, Yaliang Li, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">KDD 2022</span>
+                            <p class="reading-desc">A unified package for federated graph neural network learning, addressing the unique challenge that graph data carries structural information that cannot be trivially partitioned or anonymized. FederatedScope-GNN covers diverse graph FL settings — from subgraph federation to global graph aggregation — and provides efficient communication-aware protocols for training GNNs across distributed data silos.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">6</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">machine learning</span>
+                                <span class="reading-label">optimization</span>
+                                <span class="reading-label">regularization</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/iclr22iflood.pdf" target="_blank">iFlood: A Stable and Effective Regularizer</a></h3>
+                            <p class="reading-authors">Yuexiang Xie, Zhen Wang, Yaliang Li, Ce Zhang, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">ICLR 2022</span>
+                            <p class="reading-desc">A regularizer that enforces a minimum margin between training loss and perfect fit, stabilizing optimization across a wide range of learning tasks. Unlike L2 or dropout, iFlood targets the loss landscape itself: by penalizing configurations that bring loss too close to zero, it prevents overconfident flat minima and consistently improves generalization, especially under distribution shift.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">7</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">federated learning</span>
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">collaborative filtering</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb22fedmf.pdf" target="_blank">Federated Matrix Factorization with Privacy Guarantee</a></h3>
+                            <p class="reading-authors">Zitao Li, Ce Zhang, Ninghui Li, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">VLDB 2022</span>
+                            <p class="reading-desc">Matrix factorization under local differential privacy in a fully decentralized federated setting — no trusted server required. The paper shows how to decompose the MF objective so that clients only exchange privacy-protected gradients, and proves that the resulting noise can be calibrated to give formal DP guarantees without destroying the recommendation accuracy that makes MF valuable.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">8</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">query processing</span>
+                                <span class="reading-label">machine learning</span>
+                                <span class="reading-label">cardinality estimation</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb22ndvest.pdf" target="_blank">Learning to be a Statistician: Learned Estimator for Number of Distinct Values</a></h3>
+                            <p class="reading-authors">Renzhi Wu, Xu Chu, Zhewei Wei, Xiening Dai, Tao Guan, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">VLDB 2022</span>
+                            <p class="reading-desc">A distribution-independent learned estimator for counting distinct values (NDV) in a column — a fundamental statistic for query optimization. By framing NDV estimation as a learning problem over sub-samples, the model generalizes across arbitrary data distributions without requiring a parametric assumption, substantially outperforming classical estimators like Good-Turing on skewed real-world data.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">9</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">algorithms</span>
+                                <span class="reading-label">local DP</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/isit20blowfishldp.pdf" target="_blank">Linear and Range Counting under Metric-based Local Differential Privacy</a></h3>
+                            <p class="reading-authors">Zhuolun Xiang, Xi He, Bolin Ding, Jingren Zhou</p>
+                            <span class="reading-venue">ISIT 2020</span>
+                            <p class="reading-desc">Differentially private range counting queries that exploit the geometric structure of the domain to reduce sensitivity. By defining privacy budget in terms of a metric distance rather than a flat ε-ball, the mechanism allocates less noise to nearby domain values — yielding tighter answers for range queries while still satisfying a rigorous local DP guarantee for each user.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">10</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">query processing</span>
+                                <span class="reading-label">analytics</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/sigmod19ldpmda.pdf" target="_blank">Answering Multi-Dimensional Analytical Queries under Local Differential Privacy</a></h3>
+                            <p class="reading-authors">Tianhao Wang, Bolin Ding, Jingren Zhou, Cheng Hong, Zhicong Huang, Ninghui Li, Somesh Jha</p>
+                            <span class="reading-venue">SIGMOD 2019</span>
+                            <p class="reading-desc">Efficient multi-dimensional range queries under local differential privacy, where each user perturbs their own data before sending it to the server. The key challenge is that naive composition of 1-D LDP protocols blows up variance in high dimensions; this paper derives optimal protocols and variance-reduction strategies that make OLAP-style analytics practical under LDP.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">11</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">systems</span>
+                                <span class="reading-label">local DP</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/nips17dptelemetry.pdf" target="_blank">Collecting Telemetry Data Privately</a></h3>
+                            <p class="reading-authors">Bolin Ding, Janardhan Kulkarni, Sergey Yekhanin</p>
+                            <span class="reading-venue">NeurIPS 2017</span>
+                            <p class="reading-desc">Repeated multi-dimensional telemetry collection at population scale under local differential privacy — the model deployed in Windows 10. The paper addresses the challenge that users submit data many times over their device lifetime, and shows how to design protocols that compose gracefully over repeated collections while keeping per-report privacy budgets small enough for real deployment.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">12</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">query processing</span>
+                                <span class="reading-label">databases</span>
+                                <span class="reading-label">approximate query processing</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/sigmod16sampleseek.pdf" target="_blank">Sample + Seek: Approximating Aggregates with Distribution Precision Guarantee</a></h3>
+                            <p class="reading-authors">Silu Huang, Bolin Ding, Surajit Chaudhuri, Kaushik Chakrabarti, Chi Wang</p>
+                            <span class="reading-venue">SIGMOD 2016</span>
+                            <p class="reading-desc">Approximate query processing that synergistically combines random samples and sorted indexes to answer aggregate queries with distribution-level precision guarantees. Instead of choosing between fast-but-imprecise sampling and slow-but-exact index traversal, Sample+Seek adaptively blends both, guaranteeing not just an error bound on the estimate but a tight characterization of the full answer distribution.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">13</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">data privacy</span>
+                                <span class="reading-label">databases</span>
+                                <span class="reading-label">data cubes</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/sigmod11privatecube.pdf" target="_blank">Differentially Private Data Cubes: Optimizing Noise Sources and Consistency</a></h3>
+                            <p class="reading-authors">Bolin Ding, Marianne Winslett, Jiawei Han, Zhenhui Li</p>
+                            <span class="reading-venue">SIGMOD 2011</span>
+                            <p class="reading-desc">A mechanism for releasing entire OLAP data cubes under differential privacy, where the budget must be split across exponentially many cells and marginals that are algebraically constrained to be consistent. The paper formulates this as an optimization problem over noise allocation and proposes an efficient post-processing step to enforce consistency, enabling accurate drill-down queries on sensitive aggregate data.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">14</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">algorithms</span>
+                                <span class="reading-label">databases</span>
+                                <span class="reading-label">hardware</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/vldb11intersection.pdf" target="_blank">Fast Set Intersection in Memory</a></h3>
+                            <p class="reading-authors">Bolin Ding, Arnd Christian König</p>
+                            <span class="reading-venue">VLDB 2011</span>
+                            <p class="reading-desc">How to compute the intersection (or union) of two sets as quickly as hardware allows — using bitwise operations and SIMD parallelism. The paper systematically evaluates merge-based, hash-based, and bitset-based strategies across density regimes, derives when each dominates, and combines them into an adaptive algorithm used in inverted index evaluation and join processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">15</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">databases</span>
+                                <span class="reading-label">algorithms</span>
+                                <span class="reading-label">keyword search</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/icde07steiner.pdf" target="_blank">Finding Top-k Min-Cost Connected Trees in Databases</a></h3>
+                            <p class="reading-authors">Bolin Ding, Jeffrey Xu Yu, Shan Wang, Lu Qin, Xiao Zhang, Xuemin Lin</p>
+                            <span class="reading-venue">ICDE 2007</span>
+                            <p class="reading-desc">A fixed-parameter tractable algorithm for the group Steiner tree problem as it arises in keyword search over relational databases — finding the smallest connected subgraph that spans all keyword matches. By exploiting that the query keyword count k is small in practice, the algorithm achieves polynomial time in data size, making it the first practical exact solver for this NP-hard problem in a database context.</p>
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <span class="reading-num">16</span>
+                        <div class="reading-body">
+                            <div class="reading-labels">
+                                <span class="reading-label">databases</span>
+                                <span class="reading-label">XML</span>
+                                <span class="reading-label">pattern matching</span>
+                            </div>
+                            <h3><a href="https://bolinding.github.io/homepage.old/papers/dasfaa07twiglist.pdf" target="_blank">TwigList: Make Twig Pattern Matching Fast</a></h3>
+                            <p class="reading-authors">Lu Qin, Jeffrey Xu Yu, Bolin Ding</p>
+                            <span class="reading-venue">DASFAA 2007</span>
+                            <p class="reading-desc">Reminding me the good old times in Hong Kong with my buddy, Lu Qin. Efficient twig pattern matching in XML by decomposing a twig query into path lists and merging them with a stack-based algorithm. Twig queries — tree-structured XPath expressions — are the core operation in XML query processing; TwigList accelerates them by converting the branching structure into linear list operations, significantly reducing intermediate result size compared to prior approaches.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="notes-footer">
+        <div class="container">
+            <span class="notes-footer-name">Bolin Ding</span>
+            <a href="index.html" class="notes-footer-back">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                Back to Homepage
+            </a>
+        </div>
+    </footer>
+
+    <script src="assets/notes.js"></script>
+</body>
+</html>
