@@ -612,21 +612,27 @@ section {
 }
 
 .pub-item {
-    padding: 1.5rem 0;
+    padding: 1.5rem 1.25rem;
+    margin: 0 -1.25rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 2rem;
     align-items: start;
-    transition: opacity 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-.pub-year-group:hover .pub-year-papers .pub-item {
-    opacity: 0.4;
+.pub-item:hover {
+    background: rgba(255,255,255,0.05);
 }
 
-.pub-year-group:hover .pub-year-papers .pub-item:hover {
-    opacity: 1;
+.pub-item:hover .pub-info h3 a {
+    color: #D4775C;
+}
+
+.pub-item:hover .pub-authors {
+    color: #FFFFFF;
 }
 
 .pub-info h3 {
